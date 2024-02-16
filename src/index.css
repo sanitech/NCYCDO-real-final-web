@@ -1,13 +1,164 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "geneva";
+    src: url('./assets/Fonts/Geneva.TTF');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root{
+    --primary-color: #fcae04;
+    --secondary-color: #fca11f;
+    --text-color: #333;
+    --text-color-light: #fff;
+    --bg-color: #f4f4f4;
+    --bg-color-dark: #333;
+    --bg-color-light: #fff;
+
+    --primary-font: 'Poppins', sans-serif;
+    --secondary-font: 'Montserrat', sans-serif;
+
+    --primary-transition: all 0.3s ease-in-out;
+    --secondary-transition: all 0.3s ease-in-out;
+
+    --primary-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --secondary-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    --box-shadow: 0 0 3px 0px rgba(0, 0, 0, 0.26);
+
+    --primary-border: 1px solid #ccc;
+    --secondary-border: 1px solid #fcae04;
+
+    --primary-radius: 5px;
+    --secondary-radius: 5px;
+
+    --primary-padding: 10px;
+    --secondary-padding: 10px;
+
+    --primary-margin: 10px;
+    --secondary-margin: 10px;
+
+    --primary-z-index: 1;
+    --secondary-z-index: 2;
+
+    --primary-text-align: center;
+    --secondary-text-align: center;
+
+    --primary-display: flex;
+    --secondary-display: flex;
+
+    --primary-justify-content: center;
+    --secondary-justify-content: center;
+
+    --primary-align-items: center;
+    --secondary-align-items: center;
+
+    --primary-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    --secondary-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    --primary-grid-gap: 20px;
+    --secondary-grid-gap: 20px;
+    --primary-grid-auto-rows: 200px;
+    --secondary-grid-auto-rows: 200px;
+
+    --primary-overflow: hidden;
+    --secondary-overflow: hidden;
+
+    --primary-border-radius: 5px;
+    --secondary-border-radius: 5px;
+
+    --primary-background-color: #f4f4f4;
+    --secondary-background-color: #f4f4f4;
+
+    --primary-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --secondary-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    --primary-transform: translateX(0);
+    --secondary-transform: translateX(0);
+
+    --primary-rotate: 0;
+    --secondary-rotate: 0;
+
+    --primary-scale: 1;
+    --secondary-scale: 1;
+
+    --primary-visibility: visible;
+    --secondary-visibility: visible;
+
+    --primary-opacity: 1;
+    --secondary-opacity: 1;
+
+    --primary-underline: none;
+    --secondary-underline: none;
+
+    --primary-text-decoration: none;
+    --secondary-text-decoration: none;
+
+    --primary-text-transform: none;
+    --secondary-text-transform: none;
+
+    --primary-text-shadow: none;
+    --secondary-text-shadow: none;
+
+    --primary-transition: all 0.3s ease-in-out;
+    --secondary-transition: all 0.3s ease-in-out;
+
+    --primary-filter: none;
+    --secondary-filter: none;
+
+    --primary-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --secondary-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    --primary-text-align: center;
+    --secondary-text-align: center;
+
+    --primary-display: flex;
+    --secondary-display: flex;
+
+    --primary-justify-content: center;
+    --secondary-justify-content: center;
+
+    --primary-align-items: center;
+    --secondary-align-items: center;
+
+
+
+    --primary-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    --secondary-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    --primary-grid-gap: 20px;
+    --secondary-grid-gap: 20px;
+    --primary-grid-auto-rows: 200px;
+    --secondary-grid-auto-rows: 200px;
+
+    --primary-overflow: hidden;
+    --secondary-overflow: hidden;   
+
+    --primary-border-radius: 5px;
+    --secondary-border-radius: 5px;
+
+    --primary-background-color: #f4f4f4;
+    --secondary-background-color: #f4f4f4;
+
+    --primary-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --secondary-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    --primary-transform: translateX(0);
+    --secondary-transform: translateX(0);
+
+    --primary-rotate: 0;
+    --secondary-rotate: 0;
+
+    --primary-scale: 1;
+    --secondary-scale: 1;
+
+    --primary-visibility: visible;
+    --secondary-visibility: visible;
+
+    --primary-opacity: 1;
+    --secondary-opacity: 1;
+
+    --primary-underline: none;
+    --secondary-underline: none;
+
+
 }
