@@ -9,8 +9,8 @@ import NavTwo from "./Components/Navbar/NavTwo";
 function App() {
   return (
     <div>
-    <Navbar/>
     <NavTwo/>
+    <Navbar/>
    
       <Routes>
         <Route path="/" element={<Home />} />
