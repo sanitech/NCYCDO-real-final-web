@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import fb from "../../assets/images/Social/fb.png";
 import insta from "../../assets/images/Social/insta.png";
 import linkedin from "../../assets/images/Social/linkedin.png";
+import SocialIcon from "./SocialIcon";
 
 function NavTwo() {
   return (
@@ -15,7 +16,7 @@ function NavTwo() {
             href="/"
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
-            <img src={Logo} className="h-20" alt="Flowbite Logo" />
+            <img src={Logo} className="h-20" alt="NCYCDO Logo" />
           </a>
           <button
             data-collapse-toggle="mega-menu-full"
@@ -47,13 +48,13 @@ function NavTwo() {
           >
             <ul className="flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                   aria-current="page"
                 >
                   Home
-                </a>
+                </Link>
               </li>
               <li>
                 <button
@@ -154,40 +155,34 @@ function NavTwo() {
               </li>
 
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/contact"
                   className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
                 >
                   Contact
-                </a>
+                </Link>
               </li>
             </ul>
             <div className="donate-container">
               <div className="social-media">
-                <Link to="" className="social-icon">
-                  <img src={fb} alt="fb" />
-                </Link>
-                <Link to="" className="social-icon">
-                  <img src={insta} alt="insta" />
-                </Link>
-
-                <Link to="" className="social-icon">
-                  <img src={linkedin} alt="linkedin" />
-                </Link>
+                <SocialIcon link={""} icon={fb} alt="NCYCDO facebook account" />
+                <SocialIcon link={""} icon={insta} alt="NCYCDO instagram account" />
+                <SocialIcon link={"https://www.linkedin.com/in/new-chapter-youth-and-community-development-organization-2539762b0/"} icon={linkedin} alt="NCYCDO LinedIn account" />
               </div>
 
               <hr className="nav-divider"></hr>
 
-              <Link to="" className="dotnet-btn">
+              <Link to="/donate" className="dotnet-btn">
                 <span className="dotnet-btn-text">Donate</span>
               </Link>
             </div>
           </div>
         </div>
 
+        {/* program area dropdown */}
         <div
           id="mega-menu-full-dropdown"
-          className="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600 hidden"
+          className="mt-1 z-10 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600 hidden"
         >
           <div className="grid max-w-screen-xl px-4 py-5 mx-auto text-gray-900 dark:text-white sm:grid-cols-2 md:px-6">
             <ul>
@@ -311,43 +306,43 @@ function NavTwo() {
         {/* who we are dropdown */}
         <div
           id="whoWeAre"
-          className="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600 hidden"
+          className="mt-1 z-10 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600 hidden"
         >
           <div className="grid px-4 py-5 mx-auto text-gray-900 dark:text-white md:px-6">
             <ul>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/whoweare"
                   className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <div className="font-semibold">About us</div>
                   <span className="text-sm text-gray-500 dark:text-gray-400">
                     Connect with third-party tools that you're already using.
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/whoweare#advisory"
                   className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <div className="font-semibold">Advisory counsel</div>
                   <span className="text-sm text-gray-500 dark:text-gray-400">
                     Connect with third-party tools that you're already using.
                   </span>
-                </a>
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/whoweare#ourPartner"
                   className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <div className="font-semibold">Our partners</div>
                   <span className="text-sm text-gray-500 dark:text-gray-400">
                     Connect with third-party tools that you're already using.
                   </span>
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -360,17 +355,6 @@ function NavTwo() {
                   </span>
                 </a>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
-                >
-                  <div className="font-semibold">Education</div>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">
-                    Connect with third-party tools that you're already using.
-                  </span>
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -378,20 +362,20 @@ function NavTwo() {
         {/* resource dropdown */}
         <div
           id="resource"
-          className="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600 hidden"
+          className="mt-1 z-10 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600 hidden"
         >
-          <div className="grid  px-4 py-5 mx-auto text-gray-900 dark:text-white md:px-6">
+          <div className="grid   px-4 py-5 mx-auto text-gray-900 dark:text-white md:px-6">
             <ul>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/blog"
                   className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <div className="font-semibold">News</div>
                   {/* <span className="text-sm text-gray-500 dark:text-gray-400">
                     Connect with third-party tools that you're already using.
                   </span> */}
-                </a>
+                </Link>
               </li>
               <li>
                 <a
@@ -425,53 +409,45 @@ function NavTwo() {
         {/* getInvolve dropdown */}
         <div
           id="getInvolve"
-          className="mt-1 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600 hidden"
+          className="mt-1 z-10 border-gray-200 shadow-sm bg-gray-50 md:bg-white border-y dark:bg-gray-800 dark:border-gray-600 hidden"
         >
           <div className="grid  px-4 py-5 mx-auto text-gray-900 dark:text-white md:px-6">
             <ul>
               <li>
-                <a
-                  href="#"
-                  className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
-                >
-                  <div className="font-semibold">News</div>
-                  {/* <span className="text-sm text-gray-500 dark:text-gray-400">
-                    Connect with third-party tools that you're already using.
-                  </span> */}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
+                <Link
+                  to="/getinvolve"
                   className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <div className="font-semibold">Work With us</div>
-                </a>
+                  {/* <span className="text-sm text-gray-500 dark:text-gray-400">
+                    Connect with third-party tools that you're already using.
+                  </span> */}
+                </Link>
               </li>
 
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/getinvolve#partnerWithUs"
                   className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <div className="font-semibold">Partner with us</div>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="donate"
                   className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <div className="font-semibold">Donate </div>
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="getinvolve#volunteer"
                   className="block p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"
                 >
                   <div className="font-semibold">Volunteer </div>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

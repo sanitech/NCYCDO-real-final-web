@@ -1,0 +1,20 @@
+.event-container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    padding: 10px 20px;
+    gap: 20px;
+}
+
+.event-details-place{
+    display: flex;
+
+}
+
+.learn-more-event{
+    align-items: center;
+    cursor: pointer;
+}
+
+.more-event-detail{
+    align-items: center;
+}
