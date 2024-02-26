@@ -9,7 +9,6 @@ function News() {
   return (
     <div>
       <Blog />
-      <NewsLetter />
       <Partner />
       <Banner />
     </div>

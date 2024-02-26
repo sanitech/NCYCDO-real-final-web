@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function HomeHero() {
   return (
-    <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 dark:bg-gray-900">
       <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
         <div>
           <h1 className="block text-3xl font-bold text-gray-900 sm:text-4xl lg:text-6xl lg:leading-tight dark:text-white">
@@ -38,12 +38,12 @@ function HomeHero() {
                 <path d="m9 18 6-6-6-6" />
               </svg>
             </Link>
-            <Link
+            {/* <Link
               className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
               to="/donate"
             >
               Donate
-            </Link>
+            </Link> */}
           </div>
 
           {/* <div className="mt-6 lg:mt-10 grid grid-cols-2 gap-x-5">

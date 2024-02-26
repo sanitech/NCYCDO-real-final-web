@@ -4,21 +4,21 @@ function EventCard() {
   return (
     <div>
     <div className="event-card shadow flex gap-2 p-2 hover:shadow-md hover:cursor-pointer mb-4">
-    <div className="more-event-detail flex align-middle gap-1 flex-col w-36 justify-center">
+    <div className="more-event-detail flex align-middle gap-1 flex-col w-36 justify-center dark:text-gray-200">
       <span className="font-semibold">Sat</span>
-      <span className="font-bold text-5xl">09</span>
+      <span className="font-bold sm:text-5xl text-3xl">09</span>
       <span className="font-semibold text-sm">Feb 2024</span>
     </div>
     <div className="min-w-px h-30 bg-gray-500"></div>
 
     <div className="event-info">
-      <div className="event-title font-bold text-xl flex gap-10">Event title  <div className="min-w-px p-1 text-xs rounded-sm text-gray-700 font-medium    bg-gray-200 ">Program</div> </div>
-      <div className="event-location text-sm">location</div>
-      <div className="event-detail-info text-base text-black font-medium leading-4">
+      <div className="event-title font-bold text-xl flex gap-2 items-start dark:text-gray-200">Event title  <div className="min-w-px p-0.5  text-xs rounded-sm text-gray-700 font-medium    bg-gray-200 ">Program</div> </div>
+      <div className="event-location text-sm dark:text-gray-300">location</div>
+      <div className="event-detail-info text-base text-black font-medium leading-4 line-clamp-2 dark:text-gray-200">
         Lorem ipsum dolor sit amet consectetur, adipisicing elit.
         Assumenda, nam?
       </div>
-      <div className="learn-more flex my-3 items-center hover:text-amber-500">
+      <div className="learn-more flex my-3 items-center hover:text-amber-500 bg-amber-10 rounded dark:text-gray-200">
         <span className="font-medium text-sm">Loren more</span>
         <svg
           viewBox="0 0 24 24"

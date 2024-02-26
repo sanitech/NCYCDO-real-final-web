@@ -1,34 +1,31 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 function Error() {
   return (
     <div>
-      <div class="lg:px-24 lg:py-24 md:py-20 md:px-44 px-4 py-24 items-center flex justify-center flex-col-reverse lg:flex-row md:gap-28 gap-16">
-        <div class="xl:pt-24 w-full xl:w-1/2 relative pb-12 lg:pb-0">
-          <div class="relative">
-            <div class="absolute">
-              <div class="">
-                <h1 class="my-2 text-gray-800 font-bold text-2xl">
-                  Looks like you've found the doorway to the great nothing
-                </h1>
-                <p class="my-2 text-gray-800">
-                  Sorry about that! Please visit our hompage to get where you
-                  need to go.
-                </p>
-                <button class="sm:w-full lg:w-auto my-2 border rounded md py-4 px-8 text-center bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-opacity-50">
-                  Take me there!
-                </button>
-              </div>
-            </div>
-            <div>
-              <img src="https://i.ibb.co/G9DC8S0/404-2.png" />
-            </div>
+      <section className="flex items-center h-full p-16 dark:bg-gray-900 dark:text-gray-100">
+        <div className="container flex flex-col items-center justify-center px-5 mx-auto my-8">
+          <div className="max-w-md text-center">
+            <h2 className="mb-8 font-extrabold text-9xl dark:text-gray-600">
+              <span className="sr-only">Error</span>404
+            </h2>
+            <p className="text-2xl font-semibold md:text-3xl">
+              Sorry, we couldn't find this page.
+            </p>
+            <p className="mt-4 mb-8 dark:text-gray-400">
+              But dont worry, you can find plenty of other things on our
+              homepage.
+            </p>
+            <Link
+              rel="noopener noreferrer"
+              to="/"
+              className="px-8 py-3 bg-amber-500 font-semibold rounded dark:bg-violet-400 dark:text-gray-900"
+            >
+              Back to homepage
+            </Link>
           </div>
         </div>
-        <div>
-          <img src="https://i.ibb.co/ck1SGFJ/Group.png" />
-        </div>
-      </div>
+      </section>
     </div>
   );
 }

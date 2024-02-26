@@ -8,6 +8,9 @@ import Faq3 from '../../Components/FAQ/Faq3'
 import Footer from '../../Components/Footer/Footer'
 import State from '../../Components/State/State'
 import Event from '../../Components/Event/Event'
+import NewsDisplay from '../../Components/News/NewsDisplay'
+import CatTwo from '../../Components/CAT/CatTwo'
+import Feature from '../../Components/Feature/Feature'
 
 
 function Home() {
@@ -15,10 +18,12 @@ function Home() {
     <div>
       <HomeHero />
       <State/>
+      <Feature/>
+      <NewsDisplay/>
       <NewsLetter />
-      <Cat />
+      <CatTwo/>
       <Event/>
-      <Faq2 />
+      <Faq />
       {/* <Faq3 /> */}
     </div>
   )

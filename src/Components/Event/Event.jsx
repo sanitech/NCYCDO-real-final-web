@@ -3,10 +3,12 @@ import "./Event.css";
 import EventCard from "./EventCard";
 function Event() {
   return (
-    <div className="m-auto max-w-screen-xl p-4">
-    <div className="font-bold my-3 text-3xl">Upcoming</div>
-    <div className="text-sm mb-7">Stay updated on the latest events happening in our community.</div>
-      <div className="grid grid-cols-2 gap-6  ">
+    <div className="m-auto max-w-screen-xl p-4 dark:bg-gray-900">
+      <div className="font-bold my-3 text-3xl dark:text-gray-200">Upcoming</div>
+      <div className="text-sm mb-7 dark:text-gray-200">
+        Stay updated on the latest events happening in our community.
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 gap-4 ">
         <div className="event-current-display">
           <div className="event-poster w-full">
             <img
@@ -22,7 +24,7 @@ function Event() {
                   viewBox="0 0 24 24"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className="w-5 h-5"
+                  className="w-5 h-5 dark:text-gray-200"
                 >
                   <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                   <g
@@ -34,14 +36,14 @@ function Event() {
                     {" "}
                     <path
                       d="M3 9H21M7 3V5M17 3V5M6 13H8M6 17H8M11 13H13M11 17H13M16 13H18M16 17H18M6.2 21H17.8C18.9201 21 19.4802 21 19.908 20.782C20.2843 20.5903 20.5903 20.2843 20.782 19.908C21 19.4802 21 18.9201 21 17.8V8.2C21 7.07989 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V17.8C3 18.9201 3 19.4802 3.21799 19.908C3.40973 20.2843 3.71569 20.5903 4.09202 20.782C4.51984 21 5.07989 21 6.2 21Z"
-                      stroke="#000000"
+                     
                       stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     ></path>{" "}
                   </g>
                 </svg>
-                <span className="text-gray-700 font-medium ">
+                <span className="text-gray-700 font-medium dark:text-gray-200">
                   sat 14 Feb 2024
                 </span>
               </div>
@@ -49,9 +51,9 @@ function Event() {
                 <svg
                   viewBox="0 0 16 16"
                   xmlns="http://www.w3.org/2000/svg"
-                  fill="#000000"
+                  fill="none"
                   class="bi bi-geo-alt-fill"
-                  className="w-5 h-5"
+                  className="w-5 h-5 dark:text-gray-200"
                 >
                   <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                   <g
@@ -64,28 +66,28 @@ function Event() {
                     <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"></path>{" "}
                   </g>
                 </svg>
-                <span>Location</span>
+                <span className="text-gray-700 font-medium dark:text-gray-200">Location</span>
               </div>
             </div>
 
             <div className="event-info">
-              <div className="event-title font-bold text-xl py-3">
+              <div className="event-title font-bold text-xl py-3 dark:text-gray-200">
                 event title
               </div>
-              <div className="event-detail-info font-normal text-sm">
+              <div className="event-detail-info font-normal text-sm line-clamp-5 dark:text-gray-200">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis
                 molestias non totam fugiat, accusantium harum soluta ad velit
-                maiores accusamus!
+                maiores accusamus! lorem100
               </div>
             </div>
 
             <div className="learn-more-event flex align-middle my-5 items-center">
-              <span className="hover:text-amber-500 text-base">
+              <span className="hover:text-amber-500 text-base dark:text-gray-200">
                 View Event{" "}
               </span>
               <svg
                 viewBox="0 0 24 24"
-                fill="none"
+                fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
                 className="w-6 h-6"
               >

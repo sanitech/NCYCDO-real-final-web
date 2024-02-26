@@ -2,8 +2,8 @@ import React from "react";
 
 function NewsLetter() {
   return (
-    <div>
-      <div class="relative bg-amber-500">
+    <div id="subscribe " class="">
+      <div class="relative bg-amber-500 ">
         <div class="absolute inset-x-0 bottom-0">
           <svg
             viewBox="0 0 224 12"
