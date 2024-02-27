@@ -17,13 +17,9 @@ function State() {
             </div>
             <div class="md:7/12 lg:w-6/12">
               <h2 class="text-2xl text-gray-900 font-bold md:text-4xl dark:text-gray-200">
-                Nuxt development is carried out by passionate developers
-              </h2>
+              Empowering Youth and Building Strong Communities through our Charity's Work              </h2>
               <p class="mt-6 text-gray-600 dark:text-gray-400">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum
-                omnis voluptatem accusantium nemo perspiciatis delectus atque
-                autem! Voluptatum tenetur beatae unde aperiam, repellat expedita
-                consequatur! Officiis id consequatur atque doloremque!
+              Our charity is dedicated to youth and community development, creating opportunities and fostering positive change for a brighter future.
               </p>
               <p class="mt-4 text-gray-600 dark:text-gray-400">
                 {" "}

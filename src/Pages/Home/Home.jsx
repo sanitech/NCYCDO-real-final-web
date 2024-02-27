@@ -11,6 +11,7 @@ import Event from '../../Components/Event/Event'
 import NewsDisplay from '../../Components/News/NewsDisplay'
 import CatTwo from '../../Components/CAT/CatTwo'
 import Feature from '../../Components/Feature/Feature'
+import BuildEmpower from '../../Components/BuildSection/BuildEmpower'
 
 
 function Home() {
@@ -21,6 +22,7 @@ function Home() {
       <Feature/>
       <NewsDisplay/>
       <NewsLetter />
+      <BuildEmpower/>
       <CatTwo/>
       <Event/>
       <Faq />

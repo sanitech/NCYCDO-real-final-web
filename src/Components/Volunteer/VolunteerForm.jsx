@@ -8,12 +8,12 @@ function VolunteerForm() {
       <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div className="grid md:grid-cols-3 items-start gap-12">
           <div className="col-span-1 py-14">
-            <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl lg:text-5xl lg:leading-tight dark:text-white">
-              Hire us
+            <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl lg:text-3xl lg:leading-tight dark:text-white">
+              Join Our Volunteer Team
             </h1>
             <p className="mt-1 md:text-lg text-gray-800 dark:text-gray-200">
-              We help brands and platforms turn big ideas into beautiful digital
-              products and experiences.
+            Every hour you dedicate makes a difference. Explore our volunteer options 
+            and be a part of something impactful.
             </p>
 
             <div className="mt-8">
