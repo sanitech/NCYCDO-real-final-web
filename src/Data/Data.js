@@ -9,6 +9,7 @@ const inclusive = require("../assets/images/increaseteam.png");
 const eng = require("../assets/images/communityEng.png");
 const Integrity = require("../assets/images/Integrity.png");
 const Sustainability = require("../assets/images/Sustainability.png");
+const youtube = require("../assets/images/Social/youtube.png");
 
 export const socialMedia = [
   {
@@ -28,6 +29,12 @@ export const socialMedia = [
     icon: linkedin,
     name: "Linkedin",
     link: "https://www.linkedin.com/in/new-chapter-youth-and-community-development-organization-2539762b0/",
+  },
+  {
+    key: 4,
+    icon: youtube,
+    name: "Youtube",
+    link: "",
   },
 ];
 export const DeveloperSocial = [
@@ -101,19 +108,11 @@ export const MemberCategory = [
 
 export const programArea = [
   {
-    title: "Education",
-    sub: "",
-  },
-  {
-    title: "Peace Building and Advocacy",
+    title: "Young Girls and Women Empowerment",
     sub: "",
   },
   {
     title: "Youth Empowerment",
-    sub: "",
-  },
-  {
-    title: "Young Girls and Women Empowerment",
     sub: "",
   },
   {
@@ -125,7 +124,15 @@ export const programArea = [
     sub: "",
   },
   {
+    title: "Education",
+    sub: "",
+  },
+  {
     title: "Wash",
+    sub: "",
+  },
+  {
+    title: "Environmental protection and climate change",
     sub: "",
   },
   {

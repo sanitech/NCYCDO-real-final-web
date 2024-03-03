@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   GoogleAuthProvider,
   createUserWithEmailAndPassword,
@@ -7,18 +7,22 @@ import {
 } from "firebase/auth";
 import { auth } from "../../Firebase/FirebaseConfig";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import { useAuth } from "../../AuthProvider";
 
 function Auth({ status }) {
   const provider = new GoogleAuthProvider();
   const navigation = useNavigate();
-  const [user, setUser] = useState("");
+  const [username, setUser] = useState("");
   const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const { login,toggleFooter, toggleNavbar } = useAuth();
 
-  console.log(status)
+  console.log(status);
   const signWithEmail = (e) => {
     e.preventDefault();
     if (status === "create") {
-      createUserWithEmailAndPassword(auth, user, password)
+      createUserWithEmailAndPassword(auth, username, password)
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
@@ -30,7 +34,7 @@ function Auth({ status }) {
           // ..
         });
     } else {
-      signInWithEmailAndPassword(auth, user, password)
+      signInWithEmailAndPassword(auth, username, password)
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
@@ -64,6 +68,45 @@ function Auth({ status }) {
         // ...
       });
   };
+
+  const feet = async () => {
+    await axios
+      .get("http://localhost:5000/api/v1/volunteer")
+      .then((res) => {
+        console.log(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const loginHandler = async (e) => {
+    e.preventDefault();
+    // from AuthProvider
+    await axios
+      .post("http://localhost:5000/api/v1/user/login", {
+        username,
+        password,
+      })
+      .then((res) => {
+        setErrorMessage("");
+        login(true);
+        toggleFooter();
+        toggleNavbar();
+        console.log(res.data);
+        localStorage.setItem("isLogin", true);
+        localStorage.setItem("user", JSON.stringify(res.data.otherDetails));
+        navigation("/super/admin/dashboard", { state: res.data });
+      })
+      .catch((err) => {
+        console.log(err);
+        setErrorMessage(err.response.data.message);
+      });
+  };
+
+  useEffect(() => {
+    feet();
+  }, []);
   return (
     <div>
       <html class="h-full">
@@ -118,7 +161,7 @@ function Auth({ status }) {
                   </div>
 
                   <form
-                    onSubmit={signWithEmail}
+                    onSubmit={loginHandler}
                     method="post"
                     encType="multipart/form-data"
                   >
@@ -132,13 +175,13 @@ function Auth({ status }) {
                         </label>
                         <div class="relative">
                           <input
-                            type="email"
-                            id="email"
-                            name="email"
+                            type="text"
+                            id=""
+                            name=""
                             class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                             required
                             aria-describedby="email-error"
-                            value={user}
+                            value={username}
                             onChange={(e) => setUser(e.target.value)}
                           />
                           <div class="hidden absolute inset-y-0 end-0 pointer-events-none pe-3">
@@ -203,6 +246,15 @@ function Auth({ status }) {
                           8+ characters required
                         </p>
                       </div>
+
+                      {errorMessage && (
+                        <div
+                          class="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-100 dark:bg-gray-800 dark:text-red-400"
+                          role="alert"
+                        >
+                          {errorMessage}
+                        </div>
+                      )}
 
                       <div class="flex items-center">
                         <div class="flex">

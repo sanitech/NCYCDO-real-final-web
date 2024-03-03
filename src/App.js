@@ -21,65 +21,103 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./Firebase/FirebaseConfig";
 import Auth from "./Components/Auth/Auth";
+import { AuthProvider, useAuth } from "./AuthProvider";
+import ProtectedRoute from "./ProtectRouter";
+import VolunteerDashboard from "./Pages/VolunteerDashbord/VolunteerDashboard";
+import Dashboard from "./Pages/VolunteerDashbord/VolunteerDashboard";
+import VolunteerDetail from "./Pages/VolunteerDashbord/VolunteerDetail";
+
 function App() {
   const [user, setUser] = useState([]);
-  const [isLogin, setIsLogin] = useState(true);
+  const [isLogin, setIsLogin] = useState(
+    JSON.parse(localStorage.getItem("isLogin")) ? true : false
+  );
+  const {showNavbar, showFooter, isLoggedIn} = useAuth()
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        // User is signed in, see docs for a list of available properties
-        // https://firebase.google.com/docs/reference/js/auth.user
-        const uid = user.uid;
-        setUser(user);
-        setIsLogin(true);
-        // ...
-      } else {
-        setIsLogin(false);
-      }
-    });
-    const user = auth.currentUser;
-    if (user !== null) {
-      user.providerData.forEach((profile) => {
-        console.log("Sign-in provider: " + profile.providerId);
-        console.log("  Provider-specific UID: " + profile.uid);
-        console.log("  Name: " + profile.displayName);
-        console.log("  Email: " + profile.email);
-        console.log("  Photo URL: " + profile.photoURL);
-      });
-    }
+    console.log("isLogin", isLogin);
+    console.log(showFooter  )
+    // onAuthStateChanged(auth, (user) => {
+    //   if (user) {
+    //     // User is signed in, see docs for a list of available properties
+    //     // https://firebase.google.com/docs/reference/js/auth.user
+    //     const uid = user.uid;
+    //     setUser(user);
+    //     setIsLogin(true);
+    //     // ...
+    //   } else {
+    //     setIsLogin(false);
+    //   }
+    // });
+    // const user = auth.currentUser;
+    // if (user !== null) {
+    //   user.providerData.forEach((profile) => {
+    //     console.log("Sign-in provider: " + profile.providerId);
+    //     console.log("  Provider-specific UID: " + profile.uid);
+    //     console.log("  Name: " + profile.displayName);
+    //     console.log("  Email: " + profile.email);
+    //     console.log("  Photo URL: " + profile.photoURL);
+    //   });
+    // }
   }, []);
   return (
     <div>
-      <NavPP />
+     {showNavbar &&<NavPP />} 
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/whoweare" element={<AboutUS />} />
-        <Route path="/donate" element={<Donate />} />
-        <Route path="/getinvolve" element={<GetInvolve />} />
-        <Route path="/programAreas" element={<ProgramAreas />} />
-        <Route path="/programAreas/:id" element={<ProgramAreas />} />
-        <Route path="/blog" element={<News />} />
-        <Route path="/blog/:id" element={<DetailNews />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/volunteer" element={<Volunteer />} />
-        <Route path="/super/admin/none" element={<Auth status={"create"} />} />
-        <Route path="*" element={<Error />} />
+      <AuthProvider>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/whoweare" element={<AboutUS />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/getinvolve" element={<GetInvolve />} />
+          <Route path="/programAreas" element={<ProgramAreas />} />
+          <Route path="/programAreas/:id" element={<ProgramAreas />} />
+          <Route path="/blog" element={<News />} />
+          <Route path="/blog/:id" element={<DetailNews />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/volunteer" element={<Volunteer />} />
+          <Route
+            path="/super/admin/none"
+            element={<Auth status={"create"} />}
+          />
+          <Route path="*" element={<Error />} />
 
-      
-
-        {isLogin ? (
-            <Route
-              path="/super/admin/dashboard"
-              element={<SuperAdminDashboard />}
-            />
-            
-        ) : (
           <Route path="/super/admin" element={<SuperAdmin />} />
-        )}
-      </Routes>
-      <Footer />
+          <Route
+            path="/super/admin/dashboard"
+            element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/super/admin/volunteer"
+            element={
+              <ProtectedRoute>
+                <VolunteerDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/super/admin/volunteer/:id"
+            element={
+              <ProtectedRoute>
+                <VolunteerDetail />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/super/admin/setting"
+            element={
+              <ProtectedRoute>
+                <SuperAdminDashboard />
+              </ProtectedRoute>
+            }
+          />
+        </Routes>
+      </AuthProvider>
+     {showFooter&& <Footer />}
     </div>
   );
 }

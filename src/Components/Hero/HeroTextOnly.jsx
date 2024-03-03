@@ -6,7 +6,6 @@ function HeroTextOnly() {
       <div class="bg-amber-400 dark:bg-slate-900">
         <div class="bg-gradient-to-b from-amber-400/[.15] via-transparent">
           <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8">
-          
             <div class="max-w-3xl text-center mx-auto">
               <h1 class="block font-medium text-gray-800 text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
                 Now it's easier than ever to build products
@@ -15,7 +14,7 @@ function HeroTextOnly() {
 
             <div class="max-w-3xl text-center mx-auto">
               <p class="text-lg text-gray-600">
-              Together, we can make a difference in the world.
+                Together, we can make a difference in the world.
               </p>
             </div>
 
