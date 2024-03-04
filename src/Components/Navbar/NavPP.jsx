@@ -303,7 +303,7 @@ function NavPP() {
                         <div class="flex flex-col mx-1 md:mx-0">
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            to="/programAreas/program"
+                            to="/programAreas/Young Girls and Women Empowerment"
                           >
                             <img className="h-8 w-8" src={women} alt="" />
 
@@ -319,7 +319,7 @@ function NavPP() {
                           </Link>
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            href="#"
+                            to="/programAreas/Humanitarian Resource and Emerging issue"
                           >
                             <svg
                               class="flex-shrink-0 size-5 mt-1"
@@ -350,7 +350,8 @@ function NavPP() {
                           </Link>
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            href="#"
+                            to="/programAreas/Peace Building and Advocacy"
+
                           >
                             <img className="h-7 w-7" src={partner} alt="" />
 
@@ -368,7 +369,8 @@ function NavPP() {
                         <div class="flex flex-col mx-1 md:mx-0">
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            href="#"
+                            to="/programAreas/Education"
+
                           >
                             <img className="h-7 w-7" src={gcHat} alt="" />
 
@@ -385,7 +387,8 @@ function NavPP() {
                           </Link>
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            to="#"
+                            to="/programAreas/Wash"
+
                           >
                             <img className="h-7 w-7" src={wash} alt="" />
 
@@ -403,7 +406,8 @@ function NavPP() {
 
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            to="#"
+                            to="/programAreas/Environmental protection and climate change"
+
                           >
                             <img className="h-7 w-7" src={climate} alt="" />
 
@@ -421,7 +425,8 @@ function NavPP() {
                         <div class="flex flex-col mx-1 md:mx-0">
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            to="#"
+                            to="/programAreas/Gender Equality and Disability Inclusion"
+
                           >
                             <img className="h-7 w-7" src={gender} alt="" />
 
@@ -436,7 +441,8 @@ function NavPP() {
                           </Link>
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            to="#"
+                            to="/programAreas/Digital Literacy"
+
                           >
                             <img className="h-7 w-7" src={digital} alt="" />
 
@@ -451,7 +457,8 @@ function NavPP() {
                           </Link>
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                            href="#"
+                            to="/programAreas/Youth Empowerment"
+
                           >
                             <img className="h-7 w-7" src={empower} alt="" />
 

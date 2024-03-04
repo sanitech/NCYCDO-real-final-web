@@ -19,11 +19,9 @@ function Home() {
     <div>
       <HomeHero />
       <State/>
-      <Feature/>
-      <NewsDisplay/>
-      <NewsLetter />
+      {/* <NewsDisplay/> */}
+      {/* <NewsLetter /> */}
       <BuildEmpower/>
-      <CatTwo/>
       <Event/>
       <Faq />
       {/* <Faq3 /> */}

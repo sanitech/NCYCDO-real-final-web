@@ -11,10 +11,7 @@ function HomeHero() {
             <span className="text-amber-500">Strong Communities</span>
           </h1>
           <p className="mt-3 text-lg text-gray-800 dark:text-gray-400">
-            At our organization, we believe in the power of youth and the
-            importance of community. Through our programs and initiatives, we
-            strive to create a positive and inclusive environment where young
-            people can thrive and make a difference.
+          Welcome to New Chapter Youth and Community Development Organization a dedicated force for positive change in Ethiopia.
           </p>
 
           <div className="mt-7 grid gap-3 w-full sm:inline-flex">

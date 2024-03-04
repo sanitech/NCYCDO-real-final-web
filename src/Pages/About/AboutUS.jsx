@@ -7,15 +7,20 @@ import AnnouncementBanners from "../../Components/Banners/AnnouncementBanners";
 import Faq from "../../Components/FAQ/Faq";
 import About from "../../Components/AboutSection/About";
 import State from "../../Components/State/State";
+import Feature from "../../Components/Feature/Feature";
+import CatTwo from "../../Components/CAT/CatTwo";
 
 function AboutUS() {
   return (
     <div>
       <About />
       <State />
+      <Feature/>
+      <CatTwo/>
+
       <OurAdvisory />
       <TimeLine />
-      <AnnouncementBanners />
+      {/* // <AnnouncementBanners /> */}
       <Partner />
       <Faq />
     </div>
