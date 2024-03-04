@@ -26,8 +26,11 @@ import ProtectedRoute from "./ProtectRouter";
 import VolunteerDashboard from "./Pages/VolunteerDashbord/VolunteerDashboard";
 import Dashboard from "./Pages/VolunteerDashbord/VolunteerDashboard";
 import VolunteerDetail from "./Pages/VolunteerDashbord/VolunteerDetail";
+import Profile from "./Pages/Profile/Profile";
+import axios from "axios";
 
 function App() {
+  axios.defaults.withCredentials = true;
   const [user, setUser] = useState([]);
   const [isLogin, setIsLogin] = useState(
     JSON.parse(localStorage.getItem("isLogin")) ? true : false
@@ -111,7 +114,7 @@ function App() {
             path="/super/admin/setting"
             element={
               <ProtectedRoute>
-                <SuperAdminDashboard />
+                <Profile />
               </ProtectedRoute>
             }
           />

@@ -3,7 +3,10 @@ import { MemberCategory, programArea } from "../../Data/Data";
 import axios from "axios";
 function VolunteerCard() {
   const [formData, setFormData] = useState({});
-  const [response, setResponse] = useState("");
+  const [errorHandler, setErrorHandler] = useState(false);
+  const [errorHandlers, setErrorHandlers] = useState("");
+  const [successHandler, setSuccessHandler] = useState(false);
+  const [successHandlers, setSuccessHandlers] = useState("");
   const handleInput = (event) => {
     const { name, value } = event.target;
     setFormData({
@@ -21,23 +24,28 @@ function VolunteerCard() {
     formData["address"] =
       formData.city + "/ " + formData.state + "/ " + formData.post_code;
 
-      delete formData.first_name
-      delete formData.last_name
-      delete formData.mother_first_name
-      delete formData.mother_last_name
-      delete formData.state
-      delete formData.post_code
-      delete formData.city
+    delete formData.first_name;
+    delete formData.last_name;
+    delete formData.mother_first_name;
+    delete formData.mother_last_name;
+    delete formData.state;
+    delete formData.post_code;
+    delete formData.city;
     console.log(formData);
 
     await axios
       .post("http://localhost:5000/api/v1/volunteer", formData)
       .then((res) => {
         console.log(res.data);
-        setResponse(res.data);
+        setSuccessHandler(true);
+        setErrorHandler(false);
+        setSuccessHandlers(res.data.message);
       })
       .catch((err) => {
         console.log(err);
+        setErrorHandler(true);
+        setSuccessHandler(false);
+        setErrorHandlers(err.response.data.message);
       });
   };
   return (
@@ -521,15 +529,22 @@ function VolunteerCard() {
                 </div>
               </div>
             </div>
-            {response && (
+            {errorHandler ? (
               <div
-                class="p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-100 dark:bg-gray-800 dark:text-green-400"
-                role="alert"
-              >
-                {response}
-              </div>
-            )}
-
+                   class="p-4 mb-4 mt-4 text-sm text-red-800 rounded-lg bg-red-100 dark:bg-gray-800 dark:text-red-400"
+                   role="alert"
+               >
+                   {errorHandlers}
+               </div>
+           ):null} 
+           {successHandler ? (
+               <div
+                   class="p-4 mb-4  mt-4 text-sm text-green-800 rounded-lg bg-green-100 dark:bg-gray-800 dark:text-green-400"
+                   role="alert"
+               >
+                   {successHandlers}
+               </div>
+           ):null}
             <div class="mt-5 flex justify-end gap-x-2">
               <button
                 type="button"
