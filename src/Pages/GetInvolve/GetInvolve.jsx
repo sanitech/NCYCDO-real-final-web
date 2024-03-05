@@ -17,16 +17,18 @@ import WhyInvolve from "../../Components/ProgramCom/WhyInvolve";
 function GetInvolve() {
   return (
     <div>
-      <HeroTextOnly />
+      <HeroTextOnly  heroText={"Now it's easier than ever to make a difference"} subText={` Discover seamless ways to contribute, support, and create
+                positive change. Join us in simplifying the path to impactful
+                involvement and collectively building a better world.`}/>
       <WhyInvolve/>
-      <GetInvolveForm />
+      {/* <GetInvolveForm /> */}
       <Partner />
-      <Cat status={false} />
+      <Cat status={false} about={""}/>
       <BenefitsVolunteer/>
       <TestimonialsVolunteer />
-      <OurAdvisory />
+      <OurAdvisory /> 
       <Faq />
-      <JobList />
+      {/* <JobList /> */}
     </div>
   );
 }

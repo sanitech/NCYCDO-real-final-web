@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function BenefitsVolunteer() {
   return (
@@ -7,19 +8,22 @@ function BenefitsVolunteer() {
         <div class="grid md:grid-cols-2 gap-12">
           <div class="lg:w-3/4">
             <h2 class="text-3xl text-gray-800 font-bold lg:text-4xl dark:text-white">
-              Collaborative tools to design better user experience
+              Empower Yourself, Empower Others: The Impact of Volunteering
             </h2>
             <p class="mt-3 text-gray-800 dark:text-gray-400">
-              We help businesses bring ideas to life in the digital world, by
-              designing and implementing the technology tools that they need to
-              win.
+              Embark on a journey of personal and professional growth by
+              volunteering. Elevate your skills, expand your horizons, and
+              contribute to causes that matter. 
+              {/* Discover how your commitment to
+              volunteering not only makes a difference in the community but also
+              enriches your own development journey. */}
             </p>
             <p class="mt-5">
-              <a
-                class="inline-flex items-center gap-x-1 font-medium text-blue-600 dark:text-blue-500"
-                href="#"
+              <Link
+                class="inline-flex items-center gap-x-1 font-medium text-black hover:text-amber-500 dark:text-amber-500"
+                to="/volunteer"
               >
-                Contact sales to learn more
+                Join the Movement
                 <svg
                   class="flex-shrink-0 size-4 transition ease-in-out group-hover:translate-x-1"
                   xmlns="http://www.w3.org/2000/svg"
@@ -34,7 +38,7 @@ function BenefitsVolunteer() {
                 >
                   <path d="m9 18 6-6-6-6" />
                 </svg>
-              </a>
+              </Link>
             </p>
           </div>
 

@@ -1,5 +1,7 @@
 import React from "react";
 import about1 from "../../assets/images/abou1.png";
+import about2 from "../../assets/images/about2.png";
+import about3 from "../../assets/images/about3.jpg";
 
 const About = () => {
   return (
@@ -19,7 +21,7 @@ const About = () => {
                   </div>
                   <div className="py-3 sm:py-4">
                     <img
-                      src="https://i.ibb.co/rfHFq15/image-2.jpg"
+                      src={about2}
                       alt=""
                       className="w-full rounded-2xl"
                     />
@@ -28,7 +30,7 @@ const About = () => {
                 <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="relative z-10 my-4">
                     <img
-                      src="https://i.ibb.co/9y7nYCD/image-3.jpg"
+                      src={about3}
                       alt=""
                       className="w-full rounded-2xl"
                     />

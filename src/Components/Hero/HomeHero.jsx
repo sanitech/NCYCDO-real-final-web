@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import heroImage from "../../assets/images/youthEmpower.png";
 function HomeHero() {
   return (
     <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 dark:bg-gray-900">
@@ -255,8 +255,8 @@ function HomeHero() {
 
         <div className="relative ms-4">
           <img
-            className="w-full rounded-md"
-            src="https://images.unsplash.com/photo-1665686377065-08ba896d16fd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=700&h=800&q=80"
+            className="w-full h-dvh object-cover rounded-md"
+            src={heroImage}
             alt="Image Description"
           />
           <div className="absolute inset-0 -z-[1] bg-gradient-to-tr from-gray-200 via-white/0 to-white/0 size-full rounded-md mt-4 -mb-4 me-4 -ms-4 lg:mt-6 lg:-mb-6 lg:me-6 lg:-ms-6 dark:from-slate-800 dark:via-slate-900/0 dark:to-slate-900/0"></div>

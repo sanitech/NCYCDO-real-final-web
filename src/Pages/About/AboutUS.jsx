@@ -16,7 +16,7 @@ function AboutUS() {
       <About />
       <State />
       <Feature/>
-      <CatTwo/>
+      {/* <CatTwo/> */}
 
       <OurAdvisory />
       <TimeLine />

@@ -5,18 +5,18 @@ import { Link } from "react-router-dom";
 import fb from "../../assets/images/Social/fb.png";
 import insta from "../../assets/images/Social/insta.png";
 import linkedin from "../../assets/images/Social/linkedin.png";
-import women from "../../assets/images/navAssets/women.png"
-import gcHat from "../../assets/images/navAssets/gc.png"
-import wash from "../../assets/images/navAssets/wash.png"
-import gender from "../../assets/images/navAssets/gender.png"
-import digital from "../../assets/images/navAssets/digtal.png"
-import empower from "../../assets/images/navAssets/empower.png"
-import climate from "../../assets/images/navAssets/climate.png"
-import news from "../../assets/images/navAssets/news.png"
-import research from "../../assets/images/navAssets/research.png"
-import camera from "../../assets/images/navAssets/camera.png"
-import donate from "../../assets/images/navAssets/donate.png"
-import work from "../../assets/images/navAssets/work.png"
+import women from "../../assets/images/navAssets/women.png";
+import gcHat from "../../assets/images/navAssets/gc.png";
+import wash from "../../assets/images/navAssets/wash.png";
+import gender from "../../assets/images/navAssets/gender.png";
+import digital from "../../assets/images/navAssets/digtal.png";
+import empower from "../../assets/images/navAssets/empower.png";
+import climate from "../../assets/images/navAssets/climate.png";
+import news from "../../assets/images/navAssets/news.png";
+import research from "../../assets/images/navAssets/research.png";
+import camera from "../../assets/images/navAssets/camera.png";
+import donate from "../../assets/images/navAssets/donate.png";
+import work from "../../assets/images/navAssets/work.png";
 import SocialIcon from "./SocialIcon";
 import { socialMedia } from "../../Data/Data";
 function NavPP() {
@@ -143,8 +143,7 @@ function NavPP() {
                                 About us
                               </p>
                               <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                                Explore advice and explanations for all of
-                                Preline's features.
+                                Our Mission and Values
                               </p>
                             </div>
                           </Link>
@@ -175,8 +174,8 @@ function NavPP() {
                                 Advisory counsel
                               </p>
                               <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                                Discover the huge range of tools that Preline
-                                integrates with.
+                                Explore the collective wisdom and guidance of
+                                our esteemed Advisory Council members.
                               </p>
                             </div>
                           </Link>
@@ -192,8 +191,8 @@ function NavPP() {
                                 Our partners
                               </p>
                               <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                                Build custom integrations with our first-class
-                                API.
+                                Explore the collaborative efforts and meaningful
+                                partnerships that contribute to our mission.
                               </p>
                             </div>
                           </Link>
@@ -225,7 +224,8 @@ function NavPP() {
                                 National advocacy
                               </p>
                               <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                                Learn how to install, set up, and use Preline.
+                                Explore our impactful advocacy initiatives aimed
+                                at driving positive change on a national scale.
                               </p>
                             </div>
                           </Link>
@@ -233,7 +233,7 @@ function NavPP() {
 
                         <div class="flex flex-col pt-4 md:pt-0 mx-1 md:mx-0">
                           <span class="text-sm font-semibold uppercase text-gray-800 dark:text-gray-200">
-                            Customer stories
+                            Our stories
                           </span>
 
                           <Link
@@ -242,16 +242,14 @@ function NavPP() {
                           >
                             <img
                               class="size-32 rounded-lg"
-                              src="https://images.unsplash.com/photo-1648737967328-690548aec14f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=320&h=320&q=80"
+                              src={Logo}
                               alt="Image Description"
                             />
                             <div class="grow">
                               <p class="text-sm text-gray-800 dark:text-slate-400">
-                                Preline Projects has proved to be most efficient
-                                cloud based project tracking and bug tracking
-                                tool.
+                               We are a dedicated team of individuals, advocates, and change makers committed to creating positive change in the Ethiopia.
                               </p>
-                              <p class="mt-3 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 hover:underline font-semibold text-base dark:text-blue-400 dark:hover:text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-slate-600">
+                              <p class="mt-3 inline-flex items-center gap-x-1 text-sm text-black decoration-2 hover:underline font-semibold text-base dark:text-blue-400 dark:hover:text-blue-500 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-slate-600">
                                 Learn more
                                 <svg
                                   class="flex-shrink-0 size-4 transition ease-in-out group-hover:translate-x-1"
@@ -351,7 +349,6 @@ function NavPP() {
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                             to="/programAreas/Peace Building and Advocacy"
-
                           >
                             <img className="h-7 w-7" src={partner} alt="" />
 
@@ -370,10 +367,8 @@ function NavPP() {
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                             to="/programAreas/Education"
-
                           >
                             <img className="h-7 w-7" src={gcHat} alt="" />
-
 
                             <div class="grow">
                               <p class="font-semibold text-base text-gray-800 dark:text-gray-200">
@@ -388,18 +383,15 @@ function NavPP() {
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                             to="/programAreas/Wash"
-
                           >
                             <img className="h-7 w-7" src={wash} alt="" />
-
 
                             <div class="grow">
                               <p class="font-semibold text-base text-gray-800 dark:text-gray-200">
                                 Wash
                               </p>
                               <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                                Build custom integrations with our first-class
-                                API.
+                                Clean Water Initiatives
                               </p>
                             </div>
                           </Link>
@@ -407,7 +399,6 @@ function NavPP() {
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                             to="/programAreas/Environmental protection and climate change"
-
                           >
                             <img className="h-7 w-7" src={climate} alt="" />
 
@@ -426,7 +417,6 @@ function NavPP() {
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                             to="/programAreas/Gender Equality and Disability Inclusion"
-
                           >
                             <img className="h-7 w-7" src={gender} alt="" />
 
@@ -435,14 +425,13 @@ function NavPP() {
                                 Gender Equality and Disability Inclusion{" "}
                               </p>
                               <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                                Learn how to install, set up, and use Preline.
+                                Women's Empowerment Initiatives
                               </p>
                             </div>
                           </Link>
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                             to="/programAreas/Digital Literacy"
-
                           >
                             <img className="h-7 w-7" src={digital} alt="" />
 
@@ -451,14 +440,13 @@ function NavPP() {
                                 Digital Literacy
                               </p>
                               <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                                Learn how to install, set up, and use Preline.
+                                Basic Digital Skills
                               </p>
                             </div>
                           </Link>
                           <Link
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                             to="/programAreas/Youth Empowerment"
-
                           >
                             <img className="h-7 w-7" src={empower} alt="" />
 
@@ -513,8 +501,7 @@ function NavPP() {
                                 News
                               </p>
                               <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                                Explore advice and explanations for all of
-                                Preline's features.
+                                Latest Articles
                               </p>
                             </div>
                           </Link>
@@ -587,7 +574,7 @@ function NavPP() {
                             class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                             to="/getinvolve"
                           >
-                          <img className="h-7 w-7" src={work} alt="" />
+                            <img className="h-7 w-7" src={work} alt="" />
 
                             <div class="grow">
                               <p class="font-semibold text-base text-gray-800 dark:text-gray-200">
@@ -671,19 +658,15 @@ function NavPP() {
 
                   <div className="donate-container">
                     <div className="social-media">
-                      {
-                        socialMedia.map((socialMedia) => {
-                          return (
-                            <SocialIcon
-                              link={socialMedia.link}
-                              icon={socialMedia.icon}
-                              alt={`NCYCDO ${socialMedia.name} account`}
-                            />
-                          )
-                        })
-                      }
-
-                    
+                      {socialMedia.map((socialMedia) => {
+                        return (
+                          <SocialIcon
+                            link={socialMedia.link}
+                            icon={socialMedia.icon}
+                            alt={`NCYCDO ${socialMedia.name} account`}
+                          />
+                        );
+                      })}
                     </div>
                   </div>
 

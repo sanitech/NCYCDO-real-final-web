@@ -362,7 +362,7 @@ function Dashboard() {
                                 <span class="block text-sm font-semibold text-gray-800 dark:text-gray-200">
                                   I just love it!
                                 </span>
-                                <span class="block text-sm text-gray-500 line-clamp-2">
+                                <span class=" text-sm text-gray-500 line-clamp-2">
                                 {volunteer.bio}
 
                                 </span>

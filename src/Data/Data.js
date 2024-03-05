@@ -14,9 +14,29 @@ const youthDate = require("../assets/images/event/internationalYouth.png");
 const aidsDate = require("../assets/images/event/aids.jpg");
 const edu=require("../assets/images/programArea/edu.png")
 const women=require("../assets/images/programArea/women.png")
+const womenEmpower=require("../assets/images/programArea/women.jpg")
 const empowerImg=require("../assets/images/programArea/empower.png")
 const humanIssue=require("../assets/images/programArea/homeIssue.png")
 const peace=require("../assets/images/programArea/pease.png")
+const digital=require("../assets/images/programArea/digtal.jpg")
+const humanity=require("../assets/images/programArea/humanitys.jpg")
+const peaceHero=require("../assets/images/programArea/pec.jpg")
+const eduHero=require("../assets/images/programArea/edu.jpg")
+const washHero=require("../assets/images/programArea/wash.jpg")
+const envHero=require("../assets/images/programArea/env.jpg")
+const empowerHero=require("../assets/images/programArea/power.jpg")
+const boardImage1=require("../assets/images/board/board1.jpg")
+const boardImage2=require("../assets/images/board/board2.png")
+const boardImage3=require("../assets/images/board/board3.png")
+const boardImage4=require("../assets/images/board/board4.png")
+const boardImage5=require("../assets/images/board/board5.png")
+const advisoryBoard1= require("../assets/images/advisory/Mistir.jpg")
+const advisoryBoard2= require("../assets/images/advisory/MR Feyera Assefa.jpg")
+const advisoryBoard3= require("../assets/images/advisory/DR yeshiteila hailu.jpg")
+const advisoryBoard4= require("../assets/images/advisory/Tewodros.png")
+const advisoryBoard5= require("../assets/images/advisory/Dawit.png")
+
+
 export const socialMedia = [
   {
     key: 1,
@@ -80,12 +100,8 @@ export const FooterLinksData = [
     name: "News",
     link: "/blog",
   },
-  {
-    key: 4,
-    name: "FAQ",
-    link: "/FAQ",
-  },
 ];
+
 export const FooterSupportData = [
   {
     key: 1,
@@ -115,7 +131,8 @@ export const MemberCategory = [
 export const programArea = [
   {
     title: "Young Girls and Women Empowerment",
-    image:"https://th.bing.com/th/id/R.f75a3113d1b7c1c99f70ced8c8e60052?rik=DE09XLR0z8%2b8yA&pid=ImgRaw&r=0",
+    "subMoto":"Illuminate Her Path: Empowering Young Women with Knowledge, Courage, and the Belief that They Can Achieve Anything.",
+    image:womenEmpower,
     icon: women,
     mission: `At the heart of our mission is the commitment to empower young girls and women with the tools, skills, and resources necessary to thrive in all aspects of life. We envision a world where every girl's dreams are realized, and every woman is equipped to lead and contribute positively to her community.`,
     keyArea: [
@@ -144,7 +161,8 @@ export const programArea = [
   },
   {
     title: "Youth Empowerment",
-    image:"https://th.bing.com/th/id/R.f75a3113d1b7c1c99f70ced8c8e60052?rik=DE09XLR0z8%2b8yA&pid=ImgRaw&r=0",
+    subMoto:"Youth Unleashed: Building Leaders, Inspiring Change, Shaping a Bright Tomorrow",
+    image:empowerHero,
     icon: empowerImg,
     mission: `Our mission is to inspire and equip young individuals with the skills, knowledge, and resources necessary to become confident, responsible, and proactive members of their communities. We believe that investing in youth empowerment is an investment in a brighter, more inclusive future.`,
     keyArea: [
@@ -174,8 +192,9 @@ export const programArea = [
   },
   {
     title: "Humanitarian Resource and Emerging issue",
-    image:"",
+    image:humanity,
     icon:humanIssue,
+    subMoto:"Humanity first, resourcefulness always",
     mission: `Our mission is to inspire and equip young individuals with the skills, knowledge, and resources necessary to become confident, responsible, and proactive members of their communities. We believe that investing in youth empowerment is an investment in a brighter, more inclusive future.`,
     keyArea: [
       {
@@ -203,8 +222,9 @@ export const programArea = [
   },
   {
     title: "Peace Building and Advocacy",
-    image:"https://thumbs.dreamstime.com/b/vector-illustration-human-hands-holding-earth-globe-flying-bird-dove-as-symbol-peace-isolated-white-background-255287823.jpg",
+    image:peaceHero,
     icon:peace,
+    subMoto:"Building bridges, empowering voices, advocating for peace.",
     mission: `Our mission is to promote peace and justice by providing resources, facilitating dialogue, and advocating for policies that address the root causes of conflicts. We believe in the power of individuals and communities to be catalysts for positive change.`,
     keyArea: [
       {
@@ -232,8 +252,9 @@ export const programArea = [
   },
   {
     title: "Education",
-    image:"https://th.bing.com/th/id/OIP.HMJrA639_krQ2DYK8lBCbQHaEK?rs=1&pid=ImgDetMain",
+    image:eduHero,
     icon: edu,
+    subMoto:"Everyone deserves the power of education",
     mission: `Our mission is to transform lives through education by promoting inclusivity, providing educational resources, and creating an environment that nurtures curiosity and lifelong learning.`,
     keyArea: [
       {
@@ -261,7 +282,8 @@ export const programArea = [
   },
   {
     title: "Wash",
-    image:"https://th.bing.com/th/id/OIP.Ri8Xmf-H3m5tjb6gMdhNIAHaE8?rs=1&pid=ImgDetMain",
+    image:washHero,
+    subMoto: "Clean water, clean hands, healthy lives",
     icon:"https://media.istockphoto.com/vectors/man-washing-hands-icon-vector-id992100242?k=6&m=992100242&s=612x612&w=0&h=MJ79m1OPYA-CGDOJunChYnQKWCSNvkh5gjjIzg4_OL0=",
     mission: `Our mission is to improve the well-being of communities by providing sustainable access to clean water, promoting proper sanitation, and fostering hygiene education to prevent waterborne diseases.`,
     keyArea: [
@@ -290,7 +312,8 @@ export const programArea = [
   },
   {
     title: "Environmental protection and climate change",
-    image:"https://ichef.bbci.co.uk/news/640/cpsprodpb/AEB3/production/_116332744_3586e4bd-0c47-4d18-a530-34b1e49e98ad.jpg",
+    image:envHero,
+    subMoto:"Change course, protect our environment, it's our only home",
     icon:"https://th.bing.com/th/id/R.bed29fd3624b890699a27964aa5e3c47?rik=nTU8L1dvVjYptg&pid=ImgRaw&r=0",
     mission: `Our mission is to protect and preserve the environment, address climate change, and engage communities in sustainable practices to ensure a harmonious coexistence between people and the planet.`,
     keyArea: [
@@ -319,7 +342,8 @@ export const programArea = [
   },
   {
     title: "Digital Literacy",
-    image:"https://th.bing.com/th/id/R.c02d3cad1a11a12087184ef942843cbc?rik=h3FLsnwQ4qgZfw&pid=ImgRaw&r=0",
+    image:digital,
+    subMoto:"Connecting Hearts, Inspiring Minds: Digital Literature for Social Good and Global Understanding",
     icon:"https://th.bing.com/th/id/OIP.JPhsyTgn9yDlW4eysi3HrgHaHa?rs=1&pid=ImgDetMain",
     mission: `Our mission is to empower individuals with the essential digital skills and knowledge needed to navigate the digital landscape, fostering inclusivity and ensuring that no one is left behind in the era of technology.`,
     keyArea: [
@@ -348,6 +372,7 @@ export const programArea = [
   },
   {
     title: "Gender Equality and Disability Inclusion",
+    subMoto:"Equality Knows No Limits: Advocating for Gender Equality and Disability Inclusion, Creating a World Where Every Voice Counts",
     image:"https://th.bing.com/th/id/R.2ad8636874525afbceecae2d8c2a6ad4?rik=EbqmoXnxnLmpAQ&pid=ImgRaw&r=0",
     icon:"https://th.bing.com/th/id/R.f1db6341977ebbab903974f9199a1071?rik=w9mcWaET69efQw&pid=ImgRaw&r=0",
     mission: `Our mission is to advance gender equality and promote disability inclusion by advocating for equal rights, dismantling societal barriers, and creating spaces where every individual can participate fully and without discrimination.    `,
@@ -487,7 +512,7 @@ export const corValue = [
   },
   {
     title: "Accountability",
-    icon: "",
+    icon: "https://th.bing.com/th/id/OIP.boBy2VPC0fgtOTHtrBnrIQHaG0?rs=1&pid=ImgDetMain",
     link: "https://amref.org/",
     value:
       "Taking responsibility for actions and ensuring transparency in organizational practices.",
@@ -556,4 +581,82 @@ export const eventData = [
     },
     desc: `Join us on December 1st as we mark World AIDS Day with a powerful event themed "Breaking Barriers, Building Bridges." This day serves as a global moment to unite in the fight against HIV/AIDS, raise awareness, and remember those we've lost. Our commemoration emphasizes breaking down stigma and building bridges of support for those affected by HIV/AIDS.`,
   },
+  {
+    image: "https://opa.hhs.gov/sites/default/files/content-images/NAHM%202022%20social%20graphic.png",
+    title:
+      "National Adolescent Youth Health Forum",
+    venue: {
+      date: `Thu 1-3 Oct 2024`,
+      location: "Adama",
+    },
+    desc: `Join us for the National Adolescent Youth Health Forum, a dynamic and informative gathering aimed at addressing critical health issues affecting the youth. This forum brings together experts, policymakers, and young leaders to engage in meaningful discussions, share insights, and collectively work towards improving the health and well-being of adolescents.`,
+  },
 ];
+
+
+export const boardMember=[
+{
+  name:"Dawit Zegeye",
+  position:"Chairman",
+  image:boardImage1,
+  desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
+},
+{
+  name:"Lamrot Bzuayew",
+  position:"Vice Chairman",
+  image:boardImage2,
+  desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
+},
+{
+  name:"Daniel Tesfaye",
+  position:"Secretary",
+  image:boardImage3,
+  desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
+},
+{
+  name:"Chernet Ayele",
+  position:"Member",
+  image:boardImage4,
+  desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
+},
+{
+  name:"Noh Tesfaye",
+  position:"Member",
+  image:boardImage5,
+  desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
+},
+]
+
+
+export const adviseryBord=[
+  {
+    name:'M/S Mistir Alebachew',
+    position:'Program Manager of NEWA',
+    image:advisoryBoard1,
+    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
+  },
+  {
+    name:'M/R feyera Assefa',
+    position:'Country Director og DSW',
+    image:advisoryBoard2,
+    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
+  },
+  {
+    name:'DR Yeshitila Hailu',
+    position:"Director of Amref Health Africa",
+    image:advisoryBoard3,
+    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
+  },
+  {
+    name:'M/R Tewodros Bonsa',
+    position:'Volunteer service Officer',
+    image:advisoryBoard4,
+    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
+  },
+  {
+    name:'M/R Dawit Biru',
+    position:'Claster Manager of YNSD',
+    image:advisoryBoard5,
+    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
+  },
+]

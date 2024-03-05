@@ -5,15 +5,16 @@ import BenefitsVolunteer from '../../Components/IconSection/BenefitsVolunter'
 import Faq2 from '../../Components/FAQ/Faq2'
 import JobList from '../../Components/Job/JobList'
 import Faq from '../../Components/FAQ/Faq'
+import HeroTextOnly from '../../Components/Hero/HeroTextOnly'
 
 function Volunteer() {
   return (
     <div>
-    <BenefitsVolunteer/>
+    <HeroTextOnly heroText={"Join Us in Creating Positive Change"} subText={"Your time and skills can contribute to meaningful causes, create lasting change, and inspire others."}/>
     <VolunteerForm/>
-    <VolunteerTestimonials/>
+    {/* <VolunteerTestimonials/> */}
     <Faq/>
-    <JobList/>
+    {/* <JobList/> */}
     </div>
   )
 }

@@ -18,11 +18,11 @@ function Home() {
   return (
     <div>
       <HomeHero />
-      <State/>
-      {/* <NewsDisplay/> */}
+      <State />
+      {/* <NewsDisplay /> */}
       {/* <NewsLetter /> */}
-      <BuildEmpower/>
-      <Event/>
+      <BuildEmpower />
+      <Event />
       <Faq />
       {/* <Faq3 /> */}
     </div>

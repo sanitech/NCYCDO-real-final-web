@@ -15,27 +15,26 @@ function Footer() {
       <div class="md:grid md:grid-cols-7 md:gap-8">
         <div class="sm:col-span-2">
           <a href="#" class="inline-flex items-center">
-            <img
-              src={Logo}
-              alt="logo"
-              class="h-20"
-            />
-             <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 dark:text-gray-400">
+            <img src={Logo} alt="logo" class="h-20" />
+            <span class="ml-2 text-xl font-bold tracking-wide text-gray-800 dark:text-gray-400">
               New Chapter Youth and Community Development
             </span>
           </a>
           <div class="mt-2 lg:max-w-xl">
             <p class="text-sm text-gray-800 dark:text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
-              felis mi, faucibus dignissim lorem id, imperdiet interdum mauris.
-              Vestibulum ultrices sed libero non porta. Vivamus malesuada urna
-              eu nibh malesuada,  
-          
+              New Chapter Youth and Community Development Organization is
+              currently operating in Adama, Ethiopia, and in the future, Oromia,
+              Tigray, Afar, Amara, Somalia; It has designed projects with
+              Dredawa, Beneshangul/Gumz, Addis Ababa, Gambella regions and is
+              planning to work in collaboration with local and international
+              humanitarian organizations and the Ethiopian government.
             </p>
           </div>
         </div>
         <div class="mt-10 md:mt-0">
-          <h3 class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-200">Links</h3>
+          <h3 class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-200">
+            Links
+          </h3>
           <ul role="list" class="mt-6 space-y-4">
             {FooterLinksData.map((linksData, key) => {
               return (
@@ -49,7 +48,9 @@ function Footer() {
           </ul>
         </div>
         <div class="mt-10 md:mt-0">
-          <h3 class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-200">Support</h3>
+          <h3 class="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-200">
+            Support
+          </h3>
           <ul role="list" class="mt-6 space-y-4">
             {FooterSupportData.map((linksData, key) => {
               return (
@@ -60,7 +61,6 @@ function Footer() {
                 />
               );
             })}
-           
           </ul>
         </div>
         <div class="mt-10 md:mt-0">
@@ -83,8 +83,8 @@ function Footer() {
             Subscribe to our Newsletter
           </h3>
           <p class="mt-2 text-sm leading-6 text-gray-600 dark:text-gray-400">
-            We will inform you about promotions and exclusive offers as well as
-            new teaching materials.
+            Stay connected with our latest updates, stories, and initiatives by
+            subscribing to our newsletter.
           </p>
           <form class="mt-6 sm:flex sm:max-w-md">
             <label for="email-address" class="sr-only">

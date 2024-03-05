@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Event.css";
 import EventCard from "./EventCard";
 import { eventData } from "../../Data/Data";
 import CurrentEvent from "./CurrentEvent";
 function Event() {
-  const currentEvent = eventData[1];
+  const [currentNumber, setCurrentNumber] = useState(0);
+  const currentEvent = eventData[currentNumber];
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (currentNumber === eventData.length - 1) {
+        setCurrentNumber(-1);
+      }
+      setCurrentNumber((prevNumber) =>  prevNumber + 1);
+    }, 15000); // 5 minutes in milliseconds
+    console.log(currentNumber);
+
+    return () => clearInterval(intervalId); // Clear interval on component unmount
+  }, [currentNumber]);
+
 
   return (
     <div className="m-auto max-w-screen-xl p-4 dark:bg-gray-900">

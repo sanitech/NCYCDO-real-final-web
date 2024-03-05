@@ -1,5 +1,5 @@
 import React from 'react'
-
+import core from '../../assets/images/core.png'
 function Feature() {
   return (
     <div>
@@ -8,7 +8,7 @@ function Feature() {
         <div class="relative z-10 lg:grid lg:grid-cols-12 lg:gap-16 lg:items-center">
           <div class="mb-10 lg:mb-0 lg:col-span-6 lg:col-start-8 lg:order-2">
             <h2 class="text-2xl text-gray-800 font-bold sm:text-3xl dark:text-gray-200">
-              Fully customizable rules to match your unique needs
+              Mission, Vision and Core Value
             </h2>
     
             <nav class="grid gap-4 mt-5 md:mt-10" aria-label="Tabs" role="tablist">
@@ -16,8 +16,8 @@ function Feature() {
                 <span class="flex">
                   <svg class="flex-shrink-0 mt-2 size-6 md:size-7 hs-tab-active:text-amber-500 text-gray-800 dark:hs-tab-active:text-amber-500 dark:text-gray-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"/><path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"/><path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"/><path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"/><path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"/></svg>
                   <span class="grow ms-6">
-                    <span class="block text-lg font-semibold hs-tab-active:text-amber-500 text-gray-800 dark:hs-tab-active:text-amber-500 dark:text-gray-200">Empowering Youth Through Education</span>
-                    <span class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">Our organization focuses on providing educational opportunities and resources to empower young individuals in our community. We believe that education is the key to unlocking their full potential and creating a brighter future.</span>
+                    <span class="block text-lg font-semibold hs-tab-active:text-amber-500 text-gray-800 dark:hs-tab-active:text-amber-500 dark:text-gray-200">Mission</span>
+                    <span class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">Empowering rural and pastoral communities in Ethiopia, New Chapter Youth and Community Development Organization focuses on nutrition, clinical access, and emergency programs to address natural disasters. Collaborating with government bodies and international organizations, our mission is to improve health equity, education, and overall community well-being.</span>
                   </span>
                 </span>
               </button>
@@ -26,8 +26,8 @@ function Feature() {
                 <span class="flex">
                   <svg class="flex-shrink-0 mt-2 size-6 md:size-7 hs-tab-active:text-amber-500 text-gray-800 dark:hs-tab-active:text-amber-500 dark:text-gray-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 14 4-4"/><path d="M3.34 19a10 10 0 1 1 17.32 0"/></svg>
                   <span class="grow ms-6">
-                    <span class="block text-lg font-semibold hs-tab-active:text-amber-500 text-gray-800 dark:hs-tab-active:text-amber-500 dark:text-gray-200">Building Strong Communities</span>
-                    <span class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">We are dedicated to building strong and inclusive communities where everyone feels a sense of belonging. Through various initiatives and programs, we aim to foster connections and promote social cohesion.</span>
+                    <span class="block text-lg font-semibold hs-tab-active:text-amber-500 text-gray-800 dark:hs-tab-active:text-amber-500 dark:text-gray-200">Vision</span>
+                    <span class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">To be a recognized leader in promoting fairness and sustainable development in Ethiopia. We envision a future where everyone, especially women and children, has safe, effective, and affordable access to essential health services, education, and resources, fostering self-sufficiency and empowerment.</span>
                   </span>
                 </span>
               </button>
@@ -36,8 +36,8 @@ function Feature() {
                 <span class="flex">
                   <svg class="flex-shrink-0 mt-2 size-6 md:size-7 hs-tab-active:text-amber-500 text-gray-800 dark:hs-tab-active:text-amber-500 dark:text-gray-200" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
                   <span class="grow ms-6">
-                    <span class="block text-lg font-semibold hs-tab-active:text-amber-500 text-gray-800 dark:hs-tab-active:text-amber-500 dark:text-gray-200">Empowering Youth Through Education</span>
-                    <span class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">Our organization focuses on providing educational opportunities and resources to empower young individuals in our community. We believe that education is the key to unlocking their full potential and creating a brighter future.</span>
+                    <span class="block text-lg font-semibold hs-tab-active:text-amber-500 text-gray-800 dark:hs-tab-active:text-amber-500 dark:text-gray-200">Core Value</span>
+                    <span class="block mt-1 text-gray-800 dark:hs-tab-active:text-gray-200 dark:text-gray-200">Collaboration, Humility, Independence, Voluntary Service, Integrity, Accountability, Community Engagement, Sustainability, Empowerment</span>
                   </span>
                 </span>
               </button>
@@ -48,7 +48,7 @@ function Feature() {
             <div class="relative">
               <div>
                 <div id="tabs-with-card-1" role="tabpanel" aria-labelledby="tabs-with-card-item-1">
-                  <img class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]" src="https://images.unsplash.com/photo-1605629921711-2f6b00c6bbf4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80" alt="Image Description"/>
+                  <img class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]" src="https://th.bing.com/th/id/OIP.2lvpy7ntLkq3Z96uRFiWfgHaDt?rs=1&pid=ImgDetMain" alt="Image Description"/>
                 </div>
     
                 <div id="tabs-with-card-2" class="hidden" role="tabpanel" aria-labelledby="tabs-with-card-item-2">
@@ -56,7 +56,7 @@ function Feature() {
                 </div>
     
                 <div id="tabs-with-card-3" class="hidden" role="tabpanel" aria-labelledby="tabs-with-card-item-3">
-                  <img class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]" src="https://images.unsplash.com/photo-1598929213452-52d72f63e307?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&h=1220&q=80" alt="Image Description"/>
+                  <img class="shadow-xl shadow-gray-200 rounded-xl dark:shadow-gray-900/[.2]" src={core} alt="Image Description"/>
                 </div>
               </div>
               

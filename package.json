@@ -1,5 +1,6 @@
 {
   "name": "clinet-2",
+  "homepage":"https://www.ncycdo.com",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
