@@ -4,8 +4,8 @@ function EventCard({ event }) {
   const eventDate = event.venue.date.split(" ");
   return (
     <div>
-      <div className="event-card shadow grid grid-cols-4 gap-2 p-2 hover:shadow-md hover:cursor-pointer mb-4">
-        <div className="more-event-detail flex align-middle gap-1 flex-col w-36 justify-center dark:text-gray-200">
+      <div className="event-card shadow grid grid-cols-4 gap-2 p-2 hover:shadow-md  dark:border-b-current dark:border-amber-50 hover:cursor-pointer mb-4">
+        <div className="more-event-detail flex align-middle gap-1 flex-col justify-center dark:text-gray-200">
           <span className="font-semibold">{eventDate[0]}</span>
           <span className="font-bold sm:text-5xl text-3xl">{eventDate[1]}</span>
           <span className="font-semibold text-sm">

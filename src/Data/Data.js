@@ -30,6 +30,9 @@ const boardImage2=require("../assets/images/board/board2.png")
 const boardImage3=require("../assets/images/board/board3.png")
 const boardImage4=require("../assets/images/board/board4.png")
 const boardImage5=require("../assets/images/board/board5.png")
+const boardImage6=require("../assets/images/board/board6.png")
+const boardImage7=require("../assets/images/board/board7.png")
+const boardImage8=require("../assets/images/board/board8.png")
 const advisoryBoard1= require("../assets/images/advisory/Mistir.jpg")
 const advisoryBoard2= require("../assets/images/advisory/MR Feyera Assefa.jpg")
 const advisoryBoard3= require("../assets/images/advisory/DR yeshiteila hailu.jpg")
@@ -597,7 +600,7 @@ export const eventData = [
 export const boardMember=[
 {
   name:"Dawit Zegeye",
-  position:"Chairman",
+  position:"Board Chairman",
   image:boardImage1,
   desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
 },
@@ -608,21 +611,21 @@ export const boardMember=[
   desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
 },
 {
-  name:"Daniel Tesfaye",
-  position:"Secretary",
-  image:boardImage3,
+  name:"Yesunesh Takele",
+  position:"",
+  image:boardImage8,
   desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
 },
 {
-  name:"Chernet Ayele",
-  position:"Member",
-  image:boardImage4,
+  name:"Sebah Miftah",
+  position:"BSc in Mental Health Professional, MA in Project management",
+  image:boardImage6,
   desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
 },
 {
-  name:"Noh Tesfaye",
-  position:"Member",
-  image:boardImage5,
+  name:"ALEMTSEHAY ADUGNA",
+  position:"BA Degree in management",
+  image:boardImage7,
   desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
 },
 ]
@@ -642,21 +645,16 @@ export const adviseryBord=[
     desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
   },
   {
-    name:'DR Yeshitila Hailu',
-    position:"Director of Amref Health Africa",
+    name:'D/R Yeshitila Hailu',
+    position:"Capacity building and Partnership Senior Advisor",
     image:advisoryBoard3,
     desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
   },
   {
     name:'M/R Tewodros Bonsa',
-    position:'Volunteer service Officer',
+    position:'Volunteer service Advisor',
     image:advisoryBoard4,
     desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
   },
-  {
-    name:'M/R Dawit Biru',
-    position:'Claster Manager of YNSD',
-    image:advisoryBoard5,
-    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. "
-  },
+ 
 ]

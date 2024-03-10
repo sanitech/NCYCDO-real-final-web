@@ -22,7 +22,7 @@ import { socialMedia } from "../../Data/Data";
 function NavPP() {
   return (
     <div>
-      <header class="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full bg-white text-sm py-3 md:py-0 dark:bg-gray-800">
+      <header class="flex flex-wrap md:justify-start md:flex-nowrap sticky top-0 left-0 right-0 z-50 w-full bg-white text-sm py-3 md:py-0 ">
         <nav
           class="max-w-[85rem] w-full mx-auto px-4 md:px-6 lg:px-8"
           aria-label="Global"

@@ -1,22 +1,20 @@
 .navbar {
   height: 80px;
-  background-color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 35px;
-  font-family: geneva;
 }
 .navbar .logo {
   display: flex;
 }
-.navbar .logo img {
+/* .navbar .logo img {
   width: 190px;
   height: 60px;
   object-fit: cover;
   object-position: center;
   transition: all 0.3s ease-in-out;
-}
+} */
 
 .social-media {
   display: flex;
@@ -32,10 +30,10 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  transition: scale .4s ease-in-out;
+  transition: scale 0.4s ease-in-out;
 }
 
-.social-icon:hover{
+.social-icon:hover {
   scale: 1.01;
 }
 .left-nav {
@@ -65,14 +63,12 @@
 .nav-list {
   display: flex;
   gap: 25px;
-  font-size: 18px;
 }
 
-.dropdown i{
+.dropdown i {
   margin-left: 10px;
-
 }
-.dropdown-item{
+.dropdown-item {
   white-space: nowrap;
 }
 .donate-container {
@@ -95,67 +91,66 @@
 }
 
 .dotnet-btn-text {
-  font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.lato-thin {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-  font-style: normal;
+.from-left {
+  display: none;
 }
 
-.lato-light {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: normal;
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  /* Styles for small screens (phones) */
+  .nav-links {
+    display: flex;
+  }
+  .nav-list {
+    padding: 40px;
+    flex-direction: column;
+    position: absolute;
+    inset-inline-start: 0px;
+    background-color: inherit !important;
+    top: 80px;
+    width: 100%;
+    height: inherit;
+    transform: translateX(-100%);
+    /* height: 0;
+    overflow: hidden; */
+  }
+  .open-menu {
+    transform: translateX(0%);
+  }
+  .from-left {
+    display: flex;
+    align-items: start !important;
+    flex-direction: column-reverse;
+    width: 100%;
+    margin-left: 0;
+  }
+  .from-right {
+    display: none;
+  }
 }
 
-.lato-regular {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Styles for medium screens (tablets) */
+  .nav-links {
+    display: flex;
+  }
+  .nav-list {
+    padding: 40px;
+    flex-direction: column;
+    position: absolute;
+    inset-inline-start: 0px;
+    background-color: inherit !important;
+    top: 80px;
+    transform: translateX(-100%);
+  }
+  .open-menu {
+    transform: translateX(0%);
+  }
 }
 
-.lato-bold {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.lato-black {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: normal;
-}
-
-.lato-thin-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 100;
-  font-style: italic;
-}
-
-.lato-light-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-style: italic;
-}
-
-.lato-regular-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.lato-bold-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
-  font-style: italic;
-}
-
-.lato-black-italic {
-  font-family: "Lato", sans-serif;
-  font-weight: 900;
-  font-style: italic;
+@media screen and (min-width: 992px) {
+  /* Styles for large screens (desktops) */
 }

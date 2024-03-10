@@ -1,30 +1,40 @@
-
 .dropdown {
-    position: relative;
-    display: inline-block;
-  }
+  position: relative;
+  display: inline-block;
+}
 
-  .dropdown-btn {
-    cursor: pointer;
-  }
+.dropdown-btn {
+  cursor: pointer;
+  white-space: nowrap;
+}
+.hs-dropdown-menu,
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  inset-inline-start: 0px;
+  min-width: 15rem;
+  width: calc(900px - 20px);
+  left: 0;
+  right: 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  /* padding: 10px 20px; */
+  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(-10px);
+  opacity: 0;
+  z-index: 1;
+}
 
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    overflow: hidden;
-    /* padding: 10px 20px; */
-    transition: opacity 0.3s, transform 0.3s;
-    transform: translateY(-10px);
-    opacity: 0;
-    z-index: 1;
-  }
+.dropdown-content:last-child {
+  left: -100%;
+}
 
-  .dropdown-content a {
+.resource-dropdown {
+  width: 400px;
+}
+/* .dropdown-content a {
     display: block;
     padding: 10px 20px;
     text-decoration: none;
@@ -34,10 +44,60 @@
 
   .dropdown-content a:hover {
     background-color: #f4f4f4;
+  } */
+
+.dropdown:hover .dropdown-content {
+  display: inline;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  /* Styles for small screens (phones) */
+  .dropdown {
+    position: none;
+    display: inline-block;
   }
 
-  .dropdown:hover .dropdown-content {
-    display: block;
+  .hs-dropdown-menu,
+  .dropdown-content {
+    display: none;
+    position: relative !important;
+    width: 100% !important;
+  }
+  .dropdown-content:last-child {
+    left: 0%;
+  }
+  .dropdown:active .dropdown-content {
+    display: inline;
     transform: translateY(0);
     opacity: 1;
   }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  /* Styles for medium screens (tablets) */
+  .dropdown {
+    position: none;
+    display: inline-block;
+  }
+
+  .hs-dropdown-menu,
+  .dropdown-content {
+    display: none;
+    position: relative !important;
+    width: 100% !important;
+  }
+  .dropdown-content:last-child {
+    left: 0%;
+  }
+  .dropdown:active .dropdown-content {
+    display: inline;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* Styles for large screens (desktops) */
+}

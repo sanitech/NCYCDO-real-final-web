@@ -34,7 +34,7 @@ function VolunteerCard() {
     console.log(formData);
 
     await axios
-      .post("http://localhost:5000/api/v1/volunteer", formData)
+      .post("/api/v1/volunteer", formData)
       .then((res) => {
         console.log(res.data);
         setSuccessHandler(true);

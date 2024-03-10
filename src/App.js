@@ -28,6 +28,11 @@ import Dashboard from "./Pages/VolunteerDashbord/VolunteerDashboard";
 import VolunteerDetail from "./Pages/VolunteerDashbord/VolunteerDetail";
 import Profile from "./Pages/Profile/Profile";
 import axios from "axios";
+import ContactDashboard from "./Pages/Contact/ContactDashboard";
+import LoginByPassword from "./Components/Auth/LoginByPassword";
+import ForgetPassword from "./Components/Auth/ForgetPassword";
+import ResetPassword from "./Components/Auth/RestPassword";
+import Test from "./Pages/VolunteerDashbord/Test";
 
 function App() {
   axios.defaults.withCredentials = true;
@@ -64,12 +69,13 @@ function App() {
   }, []);
   return (
     <div>
-     {showNavbar &&<NavPP />} 
+     {showNavbar &&(<div><Navbar /> </div>)} 
 
       <AuthProvider>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/test" element={<Test />} />
           <Route path="/whoweare" element={<AboutUS />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/getinvolve" element={<GetInvolve />} />
@@ -79,6 +85,8 @@ function App() {
           <Route path="/blog/:id" element={<DetailNews />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/volunteer" element={<Volunteer />} />
+          <Route path="/super/admin/forgetPassword" element={<ForgetPassword />} />
+          <Route path="/super/admin/resetPassword/:uid/:token" element={<ResetPassword />} />
           <Route
             path="/super/admin/none"
             element={<Auth status={"create"} />}
@@ -118,9 +126,25 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route
+            path="/super/admin/contact"
+            element={
+              <ProtectedRoute>
+                <ContactDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/super/admin/login"
+            element={
+              <ProtectedRoute>
+                <LoginByPassword />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </AuthProvider>
-     {showFooter&& <Footer />}
+     {/* {showFooter&& <Footer />} */}
     </div>
   );
 }

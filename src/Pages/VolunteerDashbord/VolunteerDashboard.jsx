@@ -9,19 +9,22 @@ function Dashboard() {
   const navigate=useNavigate()
   const fetchVolunteer = async () => {
     await axios
-      .get("http://localhost:5000/api/v1/volunteer")
+      .get("/api/v1/volunteer")
       .then((res) => {
-        console.log(res.data);
+        console.log("volineer", res.data);
         setVolunteer(res.data);
       })
       .catch((err) => {
         console.log(err);
+        // if(err.response.status===401){
+        //   navigate("/super/admin/login");
+        // };
       });
   };
 
   useEffect(() => {
     fetchVolunteer()
-  }, []);
+  }, [volunteer]);
   return (
     <div>
       <AdminPannel />

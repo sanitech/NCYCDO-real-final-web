@@ -9,7 +9,7 @@ function VolunteerDetail() {
     console.log(id)
 
     const fetchVolunteer = async () => {
-        await axios.get(`http://localhost:5000/api/v1/volunteer/${id}`)
+        await axios.get(`/api/v1/volunteer/${id}`)
             .then(res => {console.log(res.data); setSelectedVolunteer(res.data)}).catch((error) => console.log('error', error))
     }
     useEffect(() => {

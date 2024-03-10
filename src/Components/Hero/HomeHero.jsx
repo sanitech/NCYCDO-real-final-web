@@ -255,7 +255,7 @@ function HomeHero() {
 
         <div className="relative ms-4">
           <img
-            className="w-full h-dvh object-cover rounded-md"
+            className="w-full h-96 lg:h-dvh md:h-96 object-cover rounded-md"
             src={heroImage}
             alt="Image Description"
           />

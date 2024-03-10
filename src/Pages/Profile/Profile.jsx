@@ -21,7 +21,7 @@ function Profile() {
     };
     const changePassword = async () => {
         console.log("cha")
-        await axios.post('http://localhost:5000/api/v1/user/changePassword', formData).then((res) => {
+        await axios.post('/api/v1/user/changePassword', formData).then((res) => {
             console.log(res.data)
             setErrorHandler("")
             setSuccessHandler(true);

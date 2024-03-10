@@ -6,10 +6,11 @@ import { useAuth } from "../../AuthProvider";
 function AdminPannel() {
   const navigation = useNavigate();
   const {logout, toggleFooter, toggleNavbar}= useAuth()
+  axios.defaults.withCredentials = true;
 
   const logoutHandler = async () => {
     await axios
-      .post("http://localhost:5000/api/v1/user/logout")
+      .post("https://api.ncycdo.com/api/v1/user/logout")
       .then((res) => {
         localStorage.setItem("isLogin", false);
         localStorage.removeItem("user");
@@ -375,6 +376,37 @@ function AdminPannel() {
                   <path d="M16 18h.01" />
                 </svg>
                 Volunteers
+              </Link>
+            </li>
+            <li>
+              <Link
+                class="w-full flex items-center gap-x-3.5 py-2 px-2.5 text-sm text-slate-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-900 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
+                to="/super/admin/contact"
+              >
+                <svg
+                  class="flex-shrink-0 size-4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+                  <line x1="16" x2="16" y1="2" y2="6" />
+                  <line x1="8" x2="8" y1="2" y2="6" />
+                  <line x1="3" x2="21" y1="10" y2="10" />
+                  <path d="M8 14h.01" />
+                  <path d="M12 14h.01" />
+                  <path d="M16 14h.01" />
+                  <path d="M8 18h.01" />
+                  <path d="M12 18h.01" />
+                  <path d="M16 18h.01" />
+                </svg>
+                Contact
               </Link>
             </li>
             <li>
