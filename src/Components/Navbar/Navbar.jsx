@@ -21,12 +21,11 @@ import research from "../../assets/images/navAssets/research.png";
 import camera from "../../assets/images/navAssets/camera.png";
 import donate from "../../assets/images/navAssets/donate.png";
 import work from "../../assets/images/navAssets/work.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Navbar() {
-  const toggleMenu=()=>{
+  const toggleMenu = () => {
 
-      document.getElementById('menu').classList.toggle('open-menu')
+    document.getElementById('menu').classList.toggle('open-menu')
   }
   return (
     <div>
@@ -246,8 +245,8 @@ function Navbar() {
                       <path d="m6 9 6 6 6-6" />
                     </svg>
                   </button>
-                  <div class="dropdown-content transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-fit hidden z-20 top-full start-0 min-w-60 bg-white md:shadow-2xl rounded-lg py-2 md:p-4 dark:bg-gray-800 dark:divide-gray-700 before:absolute before:-top-5 before:start-0 before:w-full before:h-5">
-                    <div class="md:grid md:grid-cols-3 lg:grid-cols-3 gap-4">
+                  <div class="dropdown-content program-area transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 w-fit hidden z-20 top-full start-0 min-w-60 bg-white md:shadow-2xl rounded-lg py-2 md:p-4 dark:bg-gray-800 dark:divide-gray-700 before:absolute before:-top-5 before:start-0 before:w-full before:h-5">
+                    <div class="md:grid lg:grid-cols-3 md:grid-cols-2  gap-4">
                       <div class="flex flex-col mx-1 md:mx-0">
                         <Link
                           class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
@@ -260,15 +259,14 @@ function Navbar() {
                               Young Girls and Women Empowerment
                             </p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                              Explore advice and explanations for all of
-                              Preline's features.
+                              Together, we're creating a world where every girl and woman has the opportunity to reach their full potential.
                             </p>
                           </div>
                         </Link>
                         <Link
                           class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
                           to="/programAreas/Humanitarian Resource and Emerging issue"
-                        >
+                        > 
                           <svg
                             class="flex-shrink-0 size-5 mt-1"
                             xmlns="http://www.w3.org/2000/svg"
@@ -291,8 +289,7 @@ function Navbar() {
                               Humanitarian Resource and Emerging issue{" "}
                             </p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                              Discover the huge range of tools that Preline
-                              integrates with.
+                              Together, let's be a source of support and resilience in the face of evolving challenges.
                             </p>
                           </div>
                         </Link>
@@ -307,8 +304,7 @@ function Navbar() {
                               Peace Building and Advocacy
                             </p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                              Build custom integrations with our first-class
-                              API.
+                              Discover our efforts in promoting peace and driving advocacy initiatives.
                             </p>
                           </div>
                         </Link>
@@ -325,8 +321,7 @@ function Navbar() {
                               Education
                             </p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                              Build custom integrations with our first-class
-                              API.
+                              Delve into initiatives that aim to provide access, promote learning, and shape a brighter future.
                             </p>
                           </div>
                         </Link>
@@ -341,7 +336,7 @@ function Navbar() {
                               Wash
                             </p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                              Clean Water Initiatives
+                              Join us in creating a healthier and more sustainable future through WASH interventions
                             </p>
                           </div>
                         </Link>
@@ -357,7 +352,7 @@ function Navbar() {
                               Environmental protection and climate change{" "}
                             </p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                              Learn how to install, set up, and use Preline.
+                              Discover our commitment to environmental stewardship and addressing climate change challenges.
                             </p>
                           </div>
                         </Link>
@@ -375,7 +370,7 @@ function Navbar() {
                               Gender Equality and Disability Inclusion{" "}
                             </p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                              Women's Empowerment Initiatives
+                              Join us in creating a world where diversity is celebrated, and everyone has equal opportunities.
                             </p>
                           </div>
                         </Link>
@@ -390,7 +385,7 @@ function Navbar() {
                               Digital Literacy
                             </p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                              Basic Digital Skills
+                              Empower individuals through our Digital Literacy programs.
                             </p>
                           </div>
                         </Link>
@@ -405,7 +400,8 @@ function Navbar() {
                               Youth Empowerment
                             </p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                              Learn how to install, set up, and use Preline.
+                              Discover our commitment to nurturing the potential of young individuals
+
                             </p>
                           </div>
                         </Link>
@@ -518,15 +514,14 @@ function Navbar() {
                               Work With us
                             </p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                              Explore advice and explanations for all of
-                              Preline's features.
+                              Learn more about the experience of joining our team.
                             </p>
                           </div>
                         </Link>
 
                         <Link
                           class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                          to="/getinvolve#"
+                          to="/partnerWithUs"
                         >
                           <svg
                             class="flex-shrink-0 size-5 mt-1"
@@ -550,7 +545,7 @@ function Navbar() {
                               Partner with us
                             </p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-
+                              Embark on a collaborative journey. Discover the benefits and opportunities of partnering with us
                             </p>
                           </div>
                         </Link>
@@ -566,8 +561,7 @@ function Navbar() {
                               Donate
                             </p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                              Build custom integrations with our first-class
-                              API.
+                              Learn about the impact of your donation and how you can contribute to our cause.
                             </p>
                           </div>
                         </Link>
@@ -582,8 +576,7 @@ function Navbar() {
                               Volunteer
                             </p>
                             <p class="text-sm text-gray-500 group-hover:text-gray-800 dark:group-hover:text-gray-200">
-                              Build custom integrations with our first-class
-                              API.
+                              Explore the power of volunteering and the positive impact you can make in our community.
                             </p>
                           </div>
                         </Link>
@@ -651,7 +644,6 @@ function Navbar() {
                         </svg>
                         Donate
                       </Link>
-                      <FontAwesomeIcon icon={"alarm-plus"} size="20"/>
                     </div>
                   </div>
 
@@ -724,9 +716,11 @@ function Navbar() {
             </div>
 
           </div>
-          <i onClick={toggleMenu}>Toggle</i>
-
-          {/* </div> */}
+          <i onClick={toggleMenu} className="toggle-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list size-7" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+            </svg>
+          </i>
         </nav >
       </header>
     </div>

@@ -28,7 +28,7 @@ function WhyInvolve() {
                 return(
                   <div class="flex gap-x-5">
                   <svg
-                    class="flex-shrink-0 mt-1 size-6 text-blue-600 dark:text-blue-500"
+                    class="flex-shrink-0 mt-1 size-6 text-amber-950 dark:text-amber-500"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
                     height="24"

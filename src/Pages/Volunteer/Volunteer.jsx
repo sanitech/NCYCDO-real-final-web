@@ -10,7 +10,7 @@ import HeroTextOnly from '../../Components/Hero/HeroTextOnly'
 function Volunteer() {
   return (
     <div>
-    <HeroTextOnly heroText={"Join Us in Creating Positive Change"} subText={"Your time and skills can contribute to meaningful causes, create lasting change, and inspire others."}/>
+    <HeroTextOnly heroText={"Join Us in Creating Positive Change"} subText={"Your time and skills can contribute to meaningful causes, create lasting change, and inspire others."} catBtnTitle={"Join the Team"} link={"#volunteer"}/>
     <VolunteerForm/>
     {/* <VolunteerTestimonials/> */}
     <Faq/>

@@ -33,6 +33,9 @@ import LoginByPassword from "./Components/Auth/LoginByPassword";
 import ForgetPassword from "./Components/Auth/ForgetPassword";
 import ResetPassword from "./Components/Auth/RestPassword";
 import Test from "./Pages/VolunteerDashbord/Test";
+import ContactApp from "./Components/ContactForm/ContactApp";
+import Partner from "./Components/Partner/Partener";
+import PartnerWithUs from "./Pages/PartnerWithUs/PartnerWithUs";
 
 function App() {
   axios.defaults.withCredentials = true;
@@ -84,6 +87,7 @@ function App() {
           <Route path="/blog" element={<News />} />
           <Route path="/blog/:id" element={<DetailNews />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/partnerWithUs" element={<PartnerWithUs />} />
           <Route path="/volunteer" element={<Volunteer />} />
           <Route path="/super/admin/forgetPassword" element={<ForgetPassword />} />
           <Route path="/super/admin/resetPassword/:uid/:token" element={<ResetPassword />} />
@@ -144,7 +148,7 @@ function App() {
           />
         </Routes>
       </AuthProvider>
-     {/* {showFooter&& <Footer />} */}
+     {showFooter&& <Footer />}
     </div>
   );
 }

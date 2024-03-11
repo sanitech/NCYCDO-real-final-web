@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import AdminPannel from '../../Components/Dashbord/DAshboard'
 import { useLocation, useParams } from 'react-router-dom'
 import axios from 'axios'
+import { format } from 'timeago.js'
 
 function VolunteerDetail() {
     const [selectedVolunteer, setSelectedVolunteer]=useState([])
@@ -65,7 +66,7 @@ function VolunteerDetail() {
                             </div>
                             <div className="my-2">
                                 <div className="font-normal ">Join Date</div>
-                                <div className="font-bold">{selectedVolunteer?.create_at}</div>
+                                <div className="font-bold">{format(selectedVolunteer?.create_at, 'en_US') }</div>
                             </div>
                             <div className="my-2">
                                 <div className="font-normal">Languages</div>

@@ -1,9 +1,9 @@
 import React from "react";
 
-function HeroTextOnly({heroText, subText}) {
+function HeroTextOnly({heroText, subText, catBtnTitle, link}) {
   return (
     <div>
-      <div class="bg-amber-400 dark:bg-slate-900">
+      <div class="bg-amber-400">
         <div class="bg-gradient-to-b from-amber-400/[.15] via-transparent">
           <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-24 space-y-8">
             <div class="max-w-4xl text-center mx-auto">
@@ -21,9 +21,10 @@ function HeroTextOnly({heroText, subText}) {
             <div class="text-center">
               <a
                 class="inline-flex justify-center items-center gap-x-3 text-center bg-gray-900  shadow-lg shadow-transparent hover:shadow-blue-700/50 border border-transparent text-white text-sm font-medium rounded-full focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 focus:ring-offset-white py-3 px-6 dark:focus:ring-offset-gray-800"
-                href="#involve"
+                // href="#involve"
+                href={link}
               >
-                Get Involve now
+                {catBtnTitle}
                 <svg
                   class="flex-shrink-0 size-4"
                   xmlns="http://www.w3.org/2000/svg"

@@ -24,7 +24,7 @@ function EventCard({ event }) {
           <div className="event-location text-base font-medium dark:text-gray-300">
             {event.venue.location}
           </div>
-          <div className="event-detail-info text-base text-black font-normal leading-4 line-clamp-2 dark:text-gray-200">
+          <div className="event-detail-info text-base text-black font-normal leading-5 line-clamp-2 dark:text-gray-200">
             {event.desc}
           </div>
           <div className="learn-more flex my-3 items-center hover:text-amber-500 bg-amber-10 rounded dark:text-gray-200">

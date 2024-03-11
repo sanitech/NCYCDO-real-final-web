@@ -99,6 +99,9 @@
   display: none;
 }
 
+.toggle-btn{
+  display: none;
+}
 @media screen and (min-width: 320px) and (max-width: 767px) {
   /* Styles for small screens (phones) */
   .nav-links {
@@ -130,10 +133,16 @@
   .from-right {
     display: none;
   }
+  .toggle-btn{
+    display: block;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
-  /* Styles for medium screens (tablets) */
+  /* St1yles for medium screens (tablets) */
+  .toggle-btn{
+    display: block;
+  }
   .nav-links {
     display: flex;
   }

@@ -19,7 +19,7 @@ function GetInvolve() {
     <div>
       <HeroTextOnly  heroText={"Now it's easier than ever to make a difference"} subText={` Discover seamless ways to contribute, support, and create
                 positive change. Join us in simplifying the path to impactful
-                involvement and collectively building a better world.`}/>
+                involvement and collectively building a better world.`} catBtnTitle={"Get Involve now"}/>
       <WhyInvolve/>
       {/* <GetInvolveForm /> */}
       <Partner />
