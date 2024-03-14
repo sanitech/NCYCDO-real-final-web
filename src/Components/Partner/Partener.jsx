@@ -3,7 +3,7 @@ import { PartnersWithUs } from "../../Data/Data";
 
 function Partner() {
   return (
-    <div id="ourPartner">
+    <div id="ourpartner">
       <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
         <div class="sm:w-1/2 xl:w-1/3 mx-auto text-center mb-6">
           <h2 class="text-xl font-semibold md:text-2xl md:leading-tight text-gray-800 dark:text-gray-200">

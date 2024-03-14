@@ -9,10 +9,12 @@ import About from "../../Components/AboutSection/About";
 import State from "../../Components/State/State";
 import Feature from "../../Components/Feature/Feature";
 import CatTwo from "../../Components/CAT/CatTwo";
+import HeroTextOnly from "../../Components/Hero/HeroTextOnly";
 
 function AboutUS() {
   return (
     <div>
+    <HeroTextOnly heroText={"Empowering Communities, Building a Brighter Future for Ethiopia"} catBtnTitle={"Who wer are"} link={"#whoweare"}/>
       <About />
       <State />
       <Feature/>

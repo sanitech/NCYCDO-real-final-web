@@ -24,6 +24,19 @@ export const AuthProvider = ({ children }) => {
     setShowNavbar(false); 
   };
 
+  const SubscribeHandler = async (email) => {
+    console.log(email);
+    await axios.post('/api/v1/subscribe',{email},).then((res) => {
+      console.log(res.data);
+     
+    }).catch((err) =>{
+      console.log(err.response.data.message)
+
+      // setError({email: err.response.data.message})
+    }
+    )
+
+  }
   const logout = (status) => {
     setIsLoggedIn(false);
     setUser({});
@@ -40,7 +53,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ isLoggedIn, user, login, logout, showNavbar, showFooter, toggleFooter, toggleNavbar }}>
+    <AuthContext.Provider value={{ isLoggedIn, user, login, logout, showNavbar, showFooter, toggleFooter, toggleNavbar, SubscribeHandler }}>
       {children}
     </AuthContext.Provider>
   );

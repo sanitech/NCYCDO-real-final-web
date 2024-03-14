@@ -2,16 +2,21 @@ import React from "react";
 import about1 from "../../assets/images/abou1.png";
 import about2 from "../../assets/images/about2.png";
 import about3 from "../../assets/images/about3.jpg";
-
+import about4 from "../../assets/images/about4.png"
 const About = () => {
   return (
     <>
-      <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark">
+      <section className="overflow-hidden pt-20 pb-12 lg:pt-[120px] lg:pb-[90px] bg-white dark:bg-dark" id="whoweare">
         <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-between -mx-4">
             <div className="w-full px-4 lg:w-6/12">
               <div className="flex items-center -mx-3 sm:-mx-4">
-                <div className="w-full px-3 sm:px-4 xl:w-1/2">
+                <img
+                  className="w-full h-96 lg:h-dvh md:h-96 object-cover rounded-md"
+                  src={about4}
+                  alt="Image Description"
+                />
+                {/* <div className="w-full px-3 sm:px-4 xl:w-1/2">
                   <div className="py-3 sm:py-4">
                     <img
                       src={about1}
@@ -605,23 +610,23 @@ const About = () => {
                       </svg>
                     </span>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
             <div className="w-full px-4 lg:w-1/2 xl:w-5/12">
               <div className="mt-10 lg:mt-0">
-                <span className="block mb-4 text-lg font-semibold text-primary">
+                <h2 className="block mb-4 text-4xl font-semibold text-primary">
                   Who wer are
-                </span>
-                <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px] ">
-                Empowering Communities, Building a Brighter Future for Ethiopia                </h2>
+                </h2>
+                {/* <h2 className="mb-5 text-3xl font-bold text-dark dark:text-white sm:text-[40px]/[48px] ">
+                Empowering Communities, Building a Brighter Future for Ethiopia                </h2> */}
                 <p className="mb-5 text-base text-body-color dark:text-dark-6 ">
-                Ethiopia, a land of vibrant culture and profound history, grapples with complex challenges hindering its path towards a brighter future. Poverty, limited access to essential resources, and food insecurity disproportionately burden vulnerable communities, especially those residing in rural and pastoral regions. 
+                  Ethiopia, a land of vibrant culture and profound history, grapples with complex challenges hindering its path towards a brighter future. Poverty, limited access to essential resources, and food insecurity disproportionately burden vulnerable communities, especially those residing in rural and pastoral regions.
                 </p>
                 <p className="mb-8 text-base text-body-color dark:text-dark-6 text-justify">
-                Amidst these obstacles, New Chapter Youth and Community Development Organization stands as a beacon of hope, unwavering in its commitment to empowering communities and building a brighter future for Ethiopia. Through collaboration, diverse programming, and unwavering values, New Chapter strives to create a 
-                future where every Ethiopian, regardless of background or circumstance, has the opportunity to thrive.
+                  Amidst these obstacles, New Chapter Youth and Community Development Organization stands as a beacon of hope, unwavering in its commitment to empowering communities and building a brighter future for Ethiopia. Through collaboration, diverse programming, and unwavering values, New Chapter strives to create a
+                  future where every Ethiopian, regardless of background or circumstance, has the opportunity to thrive.
                 </p>
                 <a
                   href="javascript:void(0)"

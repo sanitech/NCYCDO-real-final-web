@@ -12,12 +12,13 @@ import NewsDisplay from '../../Components/News/NewsDisplay'
 import CatTwo from '../../Components/CAT/CatTwo'
 import Feature from '../../Components/Feature/Feature'
 import BuildEmpower from '../../Components/BuildSection/BuildEmpower'
+import HeroWid from '../../Components/Hero/HeroWid'
 
 
 function Home() {
   return (
     <div>
-      <HomeHero />
+      <HeroWid />
       <State />
       {/* <NewsDisplay /> */}
       {/* <NewsLetter /> */}

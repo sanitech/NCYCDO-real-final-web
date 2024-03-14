@@ -33,12 +33,27 @@ const boardImage5 = require("../assets/images/board/board5.png");
 const boardImage6 = require("../assets/images/board/board6.png");
 const boardImage7 = require("../assets/images/board/board7.png");
 const boardImage8 = require("../assets/images/board/board8.png");
+const boardImage9 = require("../assets/images/board/board9.png");
 const advisoryBoard1 = require("../assets/images/advisory/Mistir.jpg");
 const advisoryBoard2 = require("../assets/images/advisory/MR Feyera Assefa.jpg");
 const advisoryBoard3 = require("../assets/images/advisory/DR yeshiteila hailu.jpg");
 const advisoryBoard4 = require("../assets/images/advisory/Tewodros.png");
 const advisoryBoard5 = require("../assets/images/advisory/Dawit.png");
+const telegram= require("../assets/images/Social/telegram.png");
+const google= require("../assets/images/Social/google.png");
 
+
+const gallery1 = require("../assets/images/gallery/gallery (1).jpg");
+const gallery2 = require("../assets/images/gallery/gallery (2).jpg");
+const gallery3 = require("../assets/images/gallery/gallery (3).jpg");
+const gallery4 = require("../assets/images/gallery/gallery (4).jpg");
+const gallery5 = require("../assets/images/gallery/gallery (5).jpg");
+const gallery6 = require("../assets/images/gallery/gallery (6).jpg");
+const gallery7 = require("../assets/images/gallery/gallery (7).jpg");
+const gallery8 = require("../assets/images/gallery/gallery (8).jpg");
+const gallery9 = require("../assets/images/gallery/gallery (9).jpg");
+const gallery11 = require("../assets/images/gallery/gallery (11).jpg");
+const gallery12 = require("../assets/images/gallery/gallery (12).jpg");
 export const socialMedia = [
   {
     key: 1,
@@ -48,9 +63,9 @@ export const socialMedia = [
   },
   {
     key: 2,
-    icon: instagram,
-    name: "Instagram",
-    link: "",
+    icon: telegram,
+    name: "Telegram",
+    link: "https://t.me/newchapterethiopia",
   },
   {
     key: 3,
@@ -60,9 +75,9 @@ export const socialMedia = [
   },
   {
     key: 4,
-    icon: youtube,
-    name: "Youtube",
-    link: "",
+    icon: google,
+    name: "Gmail",
+    link: "mailto:chapternew85@gmail.com",
   },
 ];
 export const DeveloperSocial = [
@@ -484,11 +499,11 @@ export const PartnersWithUs = [
     link: "https://www.dsw.org/en/",
     logo: dsw,
   },
-  {
-    name: "Amref Health Africa",
-    link: "https://amref.org/",
-    logo: amrfe,
-  },
+  // {
+  //   name: "Amref Health Africa",
+  //   link: "https://amref.org/",
+  //   logo: amrfe,
+  // },
 ];
 
 export const corValue = [
@@ -629,7 +644,7 @@ export const boardMember = [
   },
   {
     name: "Yesunesh Takele",
-    position: "",
+    position: "BA Degree Adult education and community development, Advocacy, mobilization and SBC Officer",
     image: boardImage8,
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
   },
@@ -645,6 +660,12 @@ export const boardMember = [
     image: boardImage7,
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
   },
+  {
+    name: "Mintsnot Nadew",
+    position: "BSc Computer Engineering Cofounder and CEO IX technologies",
+    image: boardImage9,
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
+  },
 ];
 
 export const adviseryBord = [
@@ -656,13 +677,13 @@ export const adviseryBord = [
   },
   {
     name: "M/R feyera Assefa",
-    position: "Country Director og DSW",
+    position: "Country Director of DSW",
     image: advisoryBoard2,
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
   },
   {
     name: "D/R Yeshitila Hailu",
-    position: "Capacity building and Partnership Senior Advisor",
+    position: "Capacity building and Partnership Senior Advisor of amref health Africa",
     image: advisoryBoard3,
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
   },
@@ -682,3 +703,69 @@ export const eduBackground = [
   "Doctorate",
   "Higher",
 ];
+
+
+export const galleryData=[
+  {
+    image:gallery1,
+    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
+    
+  },
+  
+ 
+  {
+    image:gallery6,
+    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
+    
+  },
+  {
+    image:gallery4,
+    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
+    
+  },
+  {
+    image:gallery2,
+    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
+    
+  },
+  {
+    image:gallery7,
+    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
+    
+  },
+  {
+    image:gallery12,
+    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
+    
+  },
+ 
+  {
+    image:gallery3,
+    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
+    
+  },
+  {
+    image:gallery11,
+    desc:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
+    
+  },
+  {
+    image:gallery5,
+    desc:"Lorem isum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
+    
+  },
+  
+  {
+    image:gallery8,
+    desc:"Lorem isum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
+    
+  },
+  {
+    image:gallery9,
+    desc:"Lorem isum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl sit amet ultricies luctus, nunc nisl aliquam ipsum, et faucibus erat arcu id mauris. ",
+    
+  },
+ 
+]
+
+const ethiopiaRegion=[""]

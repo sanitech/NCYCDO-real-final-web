@@ -1,17 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MemberCategory, eduBackground, programArea } from "../../Data/Data";
 import axios from "axios";
 import { ethioCity } from "../../Data/city";
 import VolunteerType from "./VolunteerType";
+import cityFile from "../../assets/file/city.xlsx"
+import regionFile from "../../assets/file/regions.xlsx"
+import * as XLSX from 'xlsx';
 function VolunteerCard() {
   const [formData, setFormData] = useState({});
   const [errorHandler, setErrorHandler] = useState(false);
   const [errorHandlers, setErrorHandlers] = useState("");
   const [successHandler, setSuccessHandler] = useState(false);
   const [successHandlers, setSuccessHandlers] = useState("");
-  const [membershipStatus, setMembershipStatus] = useState('individual');
+  const [membershipStatus, setMembershipStatus] = useState("individual");
+  const [region, setRegions] = useState([])
+  const [city, setCity] = useState([])
+  const formRef= useRef(null)
+
   const handleInput = (event) => {
     const { name, value } = event.target;
+
     setFormData({
       ...formData,
       [name]: value,
@@ -20,30 +28,34 @@ function VolunteerCard() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    // formData.push(`full_name: ${formData.full_name +formData.last_name}`)
-    formData["full_name"] = formData.first_name + " " + formData.middle_name + " " + formData.last_name;
+    console.log(formData);
+    formData["full_name"] = formData?.first_name + " " + formData?.middle_name + " " + formData?.last_name;
     formData["mother_name"] =
-      formData.mother_first_name + " " + formData.mother_middle_name + " " + formData.last_name;
+      formData?.mother_first_name + " " + formData?.mother_middle_name + " " + formData?.last_name;
     formData["address"] =
-      formData.city + "/ " + formData.state + "/ " + formData.post_code;
+      formData?.state + "/ " + formData?.city + "/ " + formData?.post_code;
 
     formData['v_type'] = membershipStatus
     delete formData.first_name;
     delete formData.last_name;
+    delete formData.middle_name;
     delete formData.mother_first_name;
+    delete formData.mother_middle_name;
     delete formData.mother_last_name;
     delete formData.state;
     delete formData.post_code;
     delete formData.city;
-    console.log(formData);
+    console.log('data',formData);
 
     await axios
       .post("/api/v1/volunteer", formData)
       .then((res) => {
+        formRef.current.reset()
         console.log(res.data);
         setSuccessHandler(true);
         setErrorHandler(false);
         setSuccessHandlers(res.data.message);
+
       })
       .catch((err) => {
         console.log(err);
@@ -52,6 +64,62 @@ function VolunteerCard() {
         setErrorHandlers(err.response.data.message);
       });
   };
+
+  const readRegionExcelFile = () => {
+    const regionURL = regionFile;
+    const cityURL = cityFile;
+
+    const req = new XMLHttpRequest();
+    req.open('GET', regionURL, true);
+    req.responseType = 'arraybuffer';
+
+    req.onload = () => {
+      const data = new Uint8Array(req.response);
+      const workbook = XLSX.read(data, { type: 'array' });
+      const worksheetName = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[worksheetName];
+      const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+      // this.setState({ data: jsonData });
+      setRegions(jsonData)
+    };
+
+    req.send();
+  }
+  const readCityExcelFile = () => {
+    const cityURL = cityFile;
+
+    const req = new XMLHttpRequest();
+    req.open('GET', cityURL, true);
+    req.responseType = 'arraybuffer';
+
+    req.onload = () => {
+      const data = new Uint8Array(req.response);
+      const workbook = XLSX.read(data, { type: 'array' });
+      const worksheetName = workbook.SheetNames[0];
+      const worksheet = workbook.Sheets[worksheetName];
+      const jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+      // this.setState({ data: jsonData });
+      setCity(jsonData)
+    };
+
+    req.send();
+  }
+
+
+  const filterByRegion = (event) => {
+    const value = event.target.value
+    setCity([])
+    let filteredData=[]
+     filteredData = city.filter(entry => entry[2] === value);
+    console.log(filteredData);
+    setCity(filteredData);
+  }
+  useEffect(() => {
+    readRegionExcelFile()
+    readCityExcelFile()
+    console.log(region)
+    console.log("city", city)
+  }, [])
   return (
     <div>
       <div class="max-w-4xl px-4 py-8 sm:px-6 lg:px-5 lg:py-14 mx-auto">
@@ -71,6 +139,7 @@ function VolunteerCard() {
             onSubmit={handleSubmit}
             method="post "
             encType="multipart/form-data"
+            ref={formRef}
           >
             <div class="grid sm:grid-cols-12 gap-2 sm:gap-6">
 
@@ -139,7 +208,7 @@ function VolunteerCard() {
                     type="text"
                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                     placeholder={membershipStatus === 'individual' ? "First name" : "Organization name"}
-                    name="first_name"
+                    name={membershipStatus === 'individual' ? "first_name" : "org_name"}
                     onChange={handleInput}
                     required
                   />
@@ -230,7 +299,7 @@ function VolunteerCard() {
                           <input
                             type="text"
                             name="gender"
-                            maxLength={6}
+                            maxLength={1}
                             class="shrink-0 py-2 px-3 mt-0.5 border-gray-300 w-full text-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
                             id="af-account-gender-checkbox-other"
                             onChange={handleInput}
@@ -268,27 +337,27 @@ function VolunteerCard() {
                   onChange={handleInput}
                 />
               </div> */}
-              
+
               <div class="sm:col-span-3">
                 <label
                   for="af-account-gender-checkbox"
                   class="inline-block text-sm text-gray-800 mt-2.5 dark:text-gray-200"
                 >
-                   Email & postal-code
+                  Email & postal-code
                 </label>
               </div>
 
               <div class="sm:col-span-9">
                 <div class="mt-2">
                   <div class="grid sm:flex gap-3">
-                  <input
-                  id="af-account-email"
-                  type="email"
-                  class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                  placeholder="maria@site.com"
-                  name="email"
-                  onChange={handleInput}
-                />
+                    <input
+                      id="af-account-email"
+                      type="email"
+                      class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                      placeholder="maria@site.com"
+                      name="email"
+                      onChange={handleInput}
+                    />
                     <input
                       type="text"
                       class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
@@ -296,8 +365,8 @@ function VolunteerCard() {
                       name={"post_code"}
                       onChange={handleInput}
                     />
-                 
-                   
+
+
                   </div>
                 </div>
               </div>
@@ -348,7 +417,7 @@ function VolunteerCard() {
                     type="text"
                     class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                     placeholder="+x(xxx)xxx-xx-xx"
-                    name="phone"
+                    name="phone_work"
                     onChange={handleInput}
                   />
 
@@ -367,41 +436,57 @@ function VolunteerCard() {
               <div class="sm:col-span-9">
                 <div class="mt-2">
                   <div class="grid sm:flex gap-3">
-                  <select
-                      name="city"
-                      onChange={handleInput}
+                    <select
+                      name="state"
+                      onChange={(e) => { handleInput(e); filterByRegion(e) }}
                       class="py-2 px-3 pe-9 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
                     >
-                      <input type="text" name="city" id="" />
-                      {
-                        ethioCity.map((item, index) => {
-                          return (
-                            <option value={item}>{item}</option>
 
+                      {
+                        region.map((region, index) => {
+                          return (
+                            <option value={region.state_code}>{region[1]}</option>
                           )
                         })
                       }
 
                     </select>
-                    
-                    <input
-                      type="text"
-                      class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                      placeholder="Post Code"
-                      name={"post_code"}
-                      onChange={handleInput}
-                    />
-                 
-                    <select
-                      name="state"
-                      onChange={handleInput}
-                      class="py-2 px-3 pe-9 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
-                    >
-                      <option selected>State</option>
-                      <option>State 1</option>
-                      <option>State 2</option>
-                      <option>State 3</option>
-                    </select>
+                    {
+                      city.length > 0 ? (
+                        <select
+                          name="city"
+                          onChange={handleInput}
+                          class="py-2 px-3 pe-9 block w-full border-gray-200 shadow-sm text-sm rounded-lg focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                        >
+                          <input type="text" name="city" id="" />
+                          {
+                            city.map((item, index) => {
+                              return (
+                                <option value={item}>{item[1]}</option>
+
+                              )
+                            })
+                          }
+
+                        </select>
+                      ) :
+                        (
+                          <input
+                            id="af-account-phone"
+                            type="text"
+                            class="py-2 px-3 pe-11 block w-full border-gray-200 shadow-sm -mt-px -ms-px first:rounded-t-lg last:rounded-b-lg sm:first:rounded-s-lg sm:mt-0 sm:first:ms-0 sm:first:rounded-se-none sm:last:rounded-es-none sm:last:rounded-e-lg text-sm relative focus:z-10 focus:border-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:ring-gray-600"
+                            placeholder="City"
+                            name="city"
+                            onChange={handleInput}
+                          />
+                        )
+                    }
+
+
+
+
+
+
                   </div>
                 </div>
               </div>
@@ -431,11 +516,11 @@ function VolunteerCard() {
                       >
                         <option selected>Select a level</option>
                         {
-                          eduBackground.map(edu=>{
+                          eduBackground.map(edu => {
                             return <option value={edu}>{edu}</option>
                           })
                         }
-                        
+
                       </select>
                     </div>
 
@@ -453,9 +538,8 @@ function VolunteerCard() {
                     <div class="sm:col-span-9">
                       <input
                         type="text"
-                        name="gender"
-                        maxLength={6}
-                        class="shrink-0 py-2 px-3 mt-0.5 border-gray-300 w-full text-amber-500 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
+                        name="work_experience"
+                        class="shrink-0 py-2 px-3 mt-0.5 border-gray-300 w-full text-gray-900 focus:ring-amber-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-500 dark:checked:bg-blue-500 dark:checked:border-blue-500 dark:focus:ring-offset-gray-800"
                         id="af-account-gender-checkbox-other"
                         onChange={handleInput}
                         placeholder="1 year"
@@ -579,6 +663,7 @@ function VolunteerCard() {
             <div class="mt-5 flex justify-end gap-x-2">
               <button
                 type="reset"
+                onClick={() => setFormData(null)}
                 class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-white dark:hover:bg-gray-800 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
               >
                 Cancel
@@ -588,7 +673,7 @@ function VolunteerCard() {
                 type="submit"
                 class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-amber-500 text-black hover:bg-amber-600 disabled:opacity-50 disabled:pointer-events-none dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
               >
-                Save changes
+                Apply now
               </button>
             </div>
           </form>

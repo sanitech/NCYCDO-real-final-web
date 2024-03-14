@@ -135,7 +135,7 @@ function Navbar() {
 
                         <Link
                           class="group flex gap-x-5 hover:bg-gray-100 rounded-lg p-4 dark:text-gray-200 dark:hover:bg-gray-900 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600"
-                          to="/whoweare#partner"
+                          to="/partner"
                         >
                           <img className="h-7 w-7" src={partner} alt="" />
 

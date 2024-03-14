@@ -87,7 +87,7 @@ function OurAdvisory() {
           })}
 
          
-          <a
+          {/* <a
             class="col-span-full lg:col-span-1 group flex flex-col justify-center text-center rounded-xl p-4 md:p-6 border border-dashed border-gray-200 hover:shadow-sm dark:border-gray-700"
             href="#"
           >
@@ -113,7 +113,7 @@ function OurAdvisory() {
                 </svg>
               </span>
             </div>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

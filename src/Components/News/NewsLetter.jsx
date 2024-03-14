@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
+import { useAuth } from "../../AuthProvider";
 
 function NewsLetter() {
+  const { SubscribeHandler } = useAuth();
+  const [email, setEmail] = useState("");
+  const submitSubscribe = (e) => {
+    e.preventDefault();
+    SubscribeHandler(email);
+  };
+
   return (
     <div id="subscribe " class="">
       <div class="relative bg-amber-500 ">
@@ -20,20 +28,26 @@ function NewsLetter() {
               Stay Updated with Our Newsletter
             </h2>
             <p class="mb-6 text-base text-indigo-50 md:text-lg">
-            Sign up for our newsletter to stay informed about the most recent news, upcoming events, and special promotions.
+              Sign up for our newsletter to stay informed about the most recent
+              news, upcoming events, and special promotions.
             </p>
-            <form class="flex flex-col items-center w-full mb-4 md:flex-row md:px-16">
-              <input
+            <form
+              onSubmit={submitSubscribe}
+              class="flex flex-col items-center w-full mb-4 md:flex-row md:px-16"
+            >
+              <input  
                 placeholder="Email"
                 required=""
                 type="text"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 class="flex-grow w-full h-12 px-4 mb-3 text-white transition duration-200 border-2 border-transparent rounded appearance-none md:mr-2 md:mb-0 bg-deep-purple-900 focus:border-teal-accent-700 focus:outline-none focus:shadow-outline"
               />
               <a
                 href="/"
                 class="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-gray-200 transition duration-200 rounded shadow-md md:w-auto hover:text-deep-purple-900 bg-teal-accent-400 hover:bg-teal-accent-700 focus:shadow-outline focus:outline-none"
               >
-                Subscribe
+                Subscribe5
               </a>
             </form>
             <p class="max-w-md mb-10 text-xs tracking-wide text-indigo-100 sm:text-sm sm:mx-auto md:mb-16">

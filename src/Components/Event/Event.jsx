@@ -32,8 +32,8 @@ function Event() {
         </div>
 
         <div className="more-events ">
-          {eventData.map((event) => {
-            return <EventCard event={event} />;
+          {eventData.map((event, key) => {
+            return <EventCard event={event} setCurrentNumber={setCurrentNumber} value={key} key={key}/>;
           })}
         </div>
       </div>

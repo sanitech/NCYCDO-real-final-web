@@ -36,6 +36,9 @@ import Test from "./Pages/VolunteerDashbord/Test";
 import ContactApp from "./Components/ContactForm/ContactApp";
 import Partner from "./Components/Partner/Partener";
 import PartnerWithUs from "./Pages/PartnerWithUs/PartnerWithUs";
+import PartnerPage from "./Pages/Partner/PartnerPage";
+import Gallery from "./Pages/Gallary/Gallery";
+import ScrollToTop from "./ScrollTop";
 
 function App() {
   axios.defaults.withCredentials = true;
@@ -43,10 +46,10 @@ function App() {
   const [isLogin, setIsLogin] = useState(
     JSON.parse(localStorage.getItem("isLogin")) ? true : false
   );
-  const {showNavbar, showFooter, isLoggedIn} = useAuth()
+  const { showNavbar, showFooter, isLoggedIn } = useAuth();
   useEffect(() => {
     console.log("isLogin", isLogin);
-    console.log(showFooter  )
+    console.log(showFooter);
     // onAuthStateChanged(auth, (user) => {
     //   if (user) {
     //     // User is signed in, see docs for a list of available properties
@@ -72,9 +75,14 @@ function App() {
   }, []);
   return (
     <div>
-     {showNavbar &&(<div><Navbar /> </div>)} 
+      {showNavbar && (
+        <div>
+          <Navbar />{" "}
+        </div>
+      )}
 
       <AuthProvider>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
@@ -82,15 +90,23 @@ function App() {
           <Route path="/whoweare" element={<AboutUS />} />
           <Route path="/donate" element={<Donate />} />
           <Route path="/getinvolve" element={<GetInvolve />} />
+          <Route path="/partner" element={<PartnerPage />} />
           <Route path="/programAreas" element={<ProgramAreas />} />
           <Route path="/programAreas/:id" element={<ProgramAreas />} />
-          <Route path="/blog" element={<News />} />
+          {/* <Route path="/blog" element={<News />} /> */}
+          <Route path="/gallery" element={<Gallery />} />
           <Route path="/blog/:id" element={<DetailNews />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/partnerWithUs" element={<PartnerWithUs />} />
           <Route path="/volunteer" element={<Volunteer />} />
-          <Route path="/super/admin/forgetPassword" element={<ForgetPassword />} />
-          <Route path="/super/admin/resetPassword/:uid/:token" element={<ResetPassword />} />
+          <Route
+            path="/super/admin/forgetPassword"
+            element={<ForgetPassword />}
+          />
+          <Route
+            path="/super/admin/resetPassword/:uid/:token"
+            element={<ResetPassword />}
+          />
           <Route
             path="/super/admin/none"
             element={<Auth status={"create"} />}
@@ -148,7 +164,7 @@ function App() {
           />
         </Routes>
       </AuthProvider>
-     {showFooter&& <Footer />}
+      {showFooter && <Footer />}
     </div>
   );
 }
