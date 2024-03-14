@@ -1,14 +1,3 @@
-
-# Global settings
-[build]
-  # Command to build your project
-  command = "npm run build"
-  # Directory to publish
-  publish = "dist"
-  
-  # Set environment variables
-  environment = { NODE_ENV = "production" }
-
 # Redirects configuration
 [[redirects]]
   from = "/*"
